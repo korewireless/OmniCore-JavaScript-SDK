@@ -19,7 +19,7 @@ if [ "$git_user_id" = "" ]; then
 fi
 
 if [ "$git_repo_id" = "" ]; then
-    git_repo_id="OmniCore-Node-SDK"
+    git_repo_id="OmniCore-JavaScript-SDK"
     echo "[INFO] No command line input provided. Set \$git_repo_id to $git_repo_id"
 fi
 

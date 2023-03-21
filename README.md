@@ -57,11 +57,11 @@ npm run build
 
 #### git
 
-If the library is hosted at a git repository, e.g.https://github.com/korewireless/OmniCore-Node-SDK
+If the library is hosted at a git repository, e.g.https://github.com/korewireless/OmniCore-JavaScript-SDK
 then install it via:
 
 ```shell
-    npm install korewireless/OmniCore-Node-SDK --save
+    npm install korewireless/OmniCore-JavaScript-SDK --save
 ```
 
 ### For browser
@@ -128,7 +128,7 @@ api.bindDevice(subscriptionId, registryId, device, callback);
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://demo-api.omnicore.cloud.korewireless.com*
+All URIs are relative to *https://api.omnicore.korewireless.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

@@ -18,6 +18,7 @@ import DeviceState from './DeviceState';
 import ErrorStatus from './ErrorStatus';
 import GatewayConfig from './GatewayConfig';
 import LogLevel from './LogLevel';
+import Policy from './Policy';
 
 /**
  * The Device model module.
@@ -136,6 +137,9 @@ class Device {
             if (data.hasOwnProperty('state')) {
                 obj['state'] = DeviceState.constructFromObject(data['state']);
             }
+            if (data.hasOwnProperty('policy')) {
+                obj['policy'] = Policy.constructFromObject(data['policy']);
+            }
         }
         return obj;
     }
@@ -241,6 +245,10 @@ class Device {
         // validate the optional field `state`
         if (data['state']) { // data not null
           DeviceState.validateJSON(data['state']);
+        }
+        // validate the optional field `policy`
+        if (data['policy']) { // data not null
+          Policy.validateJSON(data['policy']);
         }
 
         return true;
@@ -385,6 +393,11 @@ Device.prototype['config'] = undefined;
  * @member {module:model/DeviceState} state
  */
 Device.prototype['state'] = undefined;
+
+/**
+ * @member {module:model/Policy} policy
+ */
+Device.prototype['policy'] = undefined;
 
 
 

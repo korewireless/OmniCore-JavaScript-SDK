@@ -330,11 +330,13 @@ export default class DeviceApi {
      * @param {String} subscriptionid Subscription ID
      * @param {String} registryId Registry ID
      * @param {String} deviceId Device ID
-     * @param {Number} numVersions Device ID
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.numVersions The number of versions to list. Versions are listed in decreasing order of the version number. The maximum number of versions retained is 10. If this value is zero, it will return all the versions available.
      * @param {module:api/DeviceApi~getConfigCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ListDeviceConfigVersionsResponse}
      */
-    getConfig(subscriptionid, registryId, deviceId, numVersions, callback) {
+    getConfig(subscriptionid, registryId, deviceId, opts, callback) {
+      opts = opts || {};
       let postBody = null;
       // verify the required parameter 'subscriptionid' is set
       if (subscriptionid === undefined || subscriptionid === null) {
@@ -348,10 +350,6 @@ export default class DeviceApi {
       if (deviceId === undefined || deviceId === null) {
         throw new Error("Missing the required parameter 'deviceId' when calling getConfig");
       }
-      // verify the required parameter 'numVersions' is set
-      if (numVersions === undefined || numVersions === null) {
-        throw new Error("Missing the required parameter 'numVersions' when calling getConfig");
-      }
 
       let pathParams = {
         'subscriptionid': subscriptionid,
@@ -359,7 +357,7 @@ export default class DeviceApi {
         'deviceId': deviceId
       };
       let queryParams = {
-        'numVersions': numVersions
+        'numVersions': opts['numVersions']
       };
       let headerParams = {
       };
@@ -792,7 +790,7 @@ export default class DeviceApi {
      * @param {String} subscriptionId Subscription ID
      * @param {String} registryId Registry ID
      * @param {String} deviceId Device ID
-     * @param {module:model/String} updateMask Required. Only updates the device fields indicated by this mask. The field mask must not be empty, and it must not contain fields that are immutable or only set by the server. Mutable top-level fields: credentials,logLevel, blocked, and metadata
+     * @param {module:model/String} updateMask Required. Only updates the device fields indicated by this mask. The field mask must not be empty, and it must not contain fields that are immutable or only set by the server. Mutable top-level fields: credentials,logLevel, blocked,policy and metadata
      * @param {module:model/Device} device application/json
      * @param {module:api/DeviceApi~updateDeviceCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Device}

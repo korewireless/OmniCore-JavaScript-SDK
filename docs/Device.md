@@ -31,5 +31,6 @@ Name | Type | Description | Notes
 **metadata** | **{String: String}** |  | [optional] 
 **config** | [**DeviceConfig**](DeviceConfig.md) |  | [optional] 
 **state** | [**DeviceState**](DeviceState.md) |  | [optional] 
+**policy** | [**Policy**](Policy.md) |  | [optional] 
 
 

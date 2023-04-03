@@ -27,6 +27,7 @@ docs/ListDevicesResponse.md
 docs/LogLevel.md
 docs/MqttConfig.md
 docs/NotificationConfig.md
+docs/Policy.md
 docs/PublicKeyCertificate.md
 docs/PublicKeyCredential.md
 docs/RegistryApi.md
@@ -63,7 +64,9 @@ src/model/ListDevicesResponse.js
 src/model/LogLevel.js
 src/model/MqttConfig.js
 src/model/NotificationConfig.js
+src/model/Policy.js
 src/model/PublicKeyCertificate.js
 src/model/PublicKeyCredential.js
 src/model/RegistryCredential.js
 src/model/X509CertificateDetails.js
+test/model/Policy.spec.js

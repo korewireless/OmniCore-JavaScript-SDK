@@ -315,7 +315,7 @@ Name | Type | Description  | Notes
 
 ## getConfig
 
-> ListDeviceConfigVersionsResponse getConfig(subscriptionid, registryId, deviceId, numVersions)
+> ListDeviceConfigVersionsResponse getConfig(subscriptionid, registryId, deviceId, opts)
 
 
 
@@ -339,8 +339,10 @@ let apiInstance = new OmniCoreModelAndStateManagementApi.DeviceApi();
 let subscriptionid = "subscriptionid_example"; // String | Subscription ID
 let registryId = "registryId_example"; // String | Registry ID
 let deviceId = "deviceId_example"; // String | Device ID
-let numVersions = 56; // Number | Device ID
-apiInstance.getConfig(subscriptionid, registryId, deviceId, numVersions, (error, data, response) => {
+let opts = {
+  'numVersions': 56 // Number | The number of versions to list. Versions are listed in decreasing order of the version number. The maximum number of versions retained is 10. If this value is zero, it will return all the versions available.
+};
+apiInstance.getConfig(subscriptionid, registryId, deviceId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -357,7 +359,7 @@ Name | Type | Description  | Notes
  **subscriptionid** | **String**| Subscription ID | 
  **registryId** | **String**| Registry ID | 
  **deviceId** | **String**| Device ID | 
- **numVersions** | **Number**| Device ID | 
+ **numVersions** | **Number**| The number of versions to list. Versions are listed in decreasing order of the version number. The maximum number of versions retained is 10. If this value is zero, it will return all the versions available. | [optional] 
 
 ### Return type
 
@@ -829,7 +831,7 @@ let apiInstance = new OmniCoreModelAndStateManagementApi.DeviceApi();
 let subscriptionId = "subscriptionId_example"; // String | Subscription ID
 let registryId = "registryId_example"; // String | Registry ID
 let deviceId = "deviceId_example"; // String | Device ID
-let updateMask = "updateMask_example"; // String | Required. Only updates the device fields indicated by this mask. The field mask must not be empty, and it must not contain fields that are immutable or only set by the server. Mutable top-level fields: credentials,logLevel, blocked, and metadata
+let updateMask = "updateMask_example"; // String | Required. Only updates the device fields indicated by this mask. The field mask must not be empty, and it must not contain fields that are immutable or only set by the server. Mutable top-level fields: credentials,logLevel, blocked,policy and metadata
 let device = new OmniCoreModelAndStateManagementApi.Device(); // Device | application/json
 apiInstance.updateDevice(subscriptionId, registryId, deviceId, updateMask, device, (error, data, response) => {
   if (error) {
@@ -848,7 +850,7 @@ Name | Type | Description  | Notes
  **subscriptionId** | **String**| Subscription ID | 
  **registryId** | **String**| Registry ID | 
  **deviceId** | **String**| Device ID | 
- **updateMask** | **String**| Required. Only updates the device fields indicated by this mask. The field mask must not be empty, and it must not contain fields that are immutable or only set by the server. Mutable top-level fields: credentials,logLevel, blocked, and metadata | 
+ **updateMask** | **String**| Required. Only updates the device fields indicated by this mask. The field mask must not be empty, and it must not contain fields that are immutable or only set by the server. Mutable top-level fields: credentials,logLevel, blocked,policy and metadata | 
  **device** | [**Device**](Device.md)| application/json | 
 
 ### Return type

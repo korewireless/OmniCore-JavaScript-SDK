@@ -37,6 +37,7 @@ import ListDevicesResponse from './model/ListDevicesResponse';
 import LogLevel from './model/LogLevel';
 import MqttConfig from './model/MqttConfig';
 import NotificationConfig from './model/NotificationConfig';
+import Policy from './model/Policy';
 import PublicKeyCertificate from './model/PublicKeyCertificate';
 import PublicKeyCredential from './model/PublicKeyCredential';
 import RegistryCredential from './model/RegistryCredential';
@@ -226,6 +227,12 @@ export {
      * @property {module:model/NotificationConfig}
      */
     NotificationConfig,
+
+    /**
+     * The Policy model constructor.
+     * @property {module:model/Policy}
+     */
+    Policy,
 
     /**
      * The PublicKeyCertificate model constructor.

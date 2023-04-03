@@ -179,6 +179,7 @@ Class | Method | HTTP request | Description
  - [OmniCoreModelAndStateManagementApi.LogLevel](docs/LogLevel.md)
  - [OmniCoreModelAndStateManagementApi.MqttConfig](docs/MqttConfig.md)
  - [OmniCoreModelAndStateManagementApi.NotificationConfig](docs/NotificationConfig.md)
+ - [OmniCoreModelAndStateManagementApi.Policy](docs/Policy.md)
  - [OmniCoreModelAndStateManagementApi.PublicKeyCertificate](docs/PublicKeyCertificate.md)
  - [OmniCoreModelAndStateManagementApi.PublicKeyCredential](docs/PublicKeyCredential.md)
  - [OmniCoreModelAndStateManagementApi.RegistryCredential](docs/RegistryCredential.md)

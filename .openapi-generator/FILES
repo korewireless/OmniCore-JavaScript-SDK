@@ -69,4 +69,3 @@ src/model/PublicKeyCertificate.js
 src/model/PublicKeyCredential.js
 src/model/RegistryCredential.js
 src/model/X509CertificateDetails.js
-test/model/Policy.spec.js

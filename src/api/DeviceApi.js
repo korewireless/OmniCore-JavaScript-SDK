@@ -92,7 +92,7 @@ export default class DeviceApi {
       let accepts = ['application/json'];
       let returnType = Info;
       return this.apiClient.callApi(
-        '/model-state-management/subscriptions/{subscriptionId}/registries/{registryId}/bindDeviceToGateway', 'POST',
+        '/subscriptions/{subscriptionId}/registries/{registryId}/bindDeviceToGateway', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -145,7 +145,7 @@ export default class DeviceApi {
       let accepts = ['application/json'];
       let returnType = Info;
       return this.apiClient.callApi(
-        '/model-state-management/subscriptions/{subscriptionId}/registries/{registryId}/bindDevicesToGateway', 'POST',
+        '/subscriptions/{subscriptionId}/registries/{registryId}/bindDevicesToGateway', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -204,7 +204,7 @@ export default class DeviceApi {
       let accepts = ['application/json'];
       let returnType = Object;
       return this.apiClient.callApi(
-        '/model-state-management/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/communication', 'PUT',
+        '/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/communication', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -257,7 +257,7 @@ export default class DeviceApi {
       let accepts = ['application/json'];
       let returnType = Device;
       return this.apiClient.callApi(
-        '/model-state-management/subscriptions/{subscriptionId}/registries/{registryId}/devices', 'POST',
+        '/subscriptions/{subscriptionId}/registries/{registryId}/devices', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -311,7 +311,7 @@ export default class DeviceApi {
       let accepts = ['application/json'];
       let returnType = Info;
       return this.apiClient.callApi(
-        '/model-state-management/subscriptions/{subscriptionId}/registries/{registryId}/devices/{deviceId}', 'DELETE',
+        '/subscriptions/{subscriptionId}/registries/{registryId}/devices/{deviceId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -369,7 +369,7 @@ export default class DeviceApi {
       let accepts = ['application/json'];
       let returnType = ListDeviceConfigVersionsResponse;
       return this.apiClient.callApi(
-        '/model-state-management/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/configVersions', 'GET',
+        '/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/configVersions', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -423,7 +423,7 @@ export default class DeviceApi {
       let accepts = ['application/json'];
       let returnType = Device;
       return this.apiClient.callApi(
-        '/model-state-management/subscriptions/{subscriptionId}/registries/{registryId}/devices/{deviceId}', 'GET',
+        '/subscriptions/{subscriptionId}/registries/{registryId}/devices/{deviceId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -489,7 +489,7 @@ export default class DeviceApi {
       let accepts = ['application/json'];
       let returnType = ListDevicesResponse;
       return this.apiClient.callApi(
-        '/model-state-management/subscriptions/{subscriptionId}/registries/{registryId}/devices', 'GET',
+        '/subscriptions/{subscriptionId}/registries/{registryId}/devices', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -547,7 +547,7 @@ export default class DeviceApi {
       let accepts = ['application/json'];
       let returnType = ListDeviceStatesResponse;
       return this.apiClient.callApi(
-        '/model-state-management/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/states', 'GET',
+        '/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/states', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -606,7 +606,7 @@ export default class DeviceApi {
       let accepts = ['application/json'];
       let returnType = Object;
       return this.apiClient.callApi(
-        '/model-state-management/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/sendCommandToDevice', 'POST',
+        '/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/sendCommandToDevice', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -659,7 +659,7 @@ export default class DeviceApi {
       let accepts = ['application/json'];
       let returnType = Info;
       return this.apiClient.callApi(
-        '/model-state-management/subscriptions/{subscriptionId}/registries/{registryId}/unbindDeviceFromGateway', 'POST',
+        '/subscriptions/{subscriptionId}/registries/{registryId}/unbindDeviceFromGateway', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -712,7 +712,7 @@ export default class DeviceApi {
       let accepts = ['application/json'];
       let returnType = Info;
       return this.apiClient.callApi(
-        '/model-state-management/subscriptions/{subscriptionId}/registries/{registryId}/unbindDevicesFromGateway', 'POST',
+        '/subscriptions/{subscriptionId}/registries/{registryId}/unbindDevicesFromGateway', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -771,7 +771,7 @@ export default class DeviceApi {
       let accepts = ['application/json'];
       let returnType = DeviceConfig;
       return this.apiClient.callApi(
-        '/model-state-management/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/updateConfigurationToDevice', 'POST',
+        '/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/updateConfigurationToDevice', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -836,7 +836,7 @@ export default class DeviceApi {
       let accepts = ['application/json'];
       let returnType = Device;
       return this.apiClient.callApi(
-        '/model-state-management/subscriptions/{subscriptionId}/registries/{registryId}/devices/{deviceId}', 'PATCH',
+        '/subscriptions/{subscriptionId}/registries/{registryId}/devices/{deviceId}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

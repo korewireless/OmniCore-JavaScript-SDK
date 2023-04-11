@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import DeviceCommand from '../model/DeviceCommand';
 import DeviceRegistry from '../model/DeviceRegistry';
 import GenericErrorResponse from '../model/GenericErrorResponse';
 import Info from '../model/Info';
@@ -76,7 +77,7 @@ export default class RegistryApi {
       let accepts = ['application/json'];
       let returnType = DeviceRegistry;
       return this.apiClient.callApi(
-        '/model-state-management/subscriptions/{subscriptionId}/registries', 'POST',
+        '/subscriptions/{subscriptionId}/registries', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -124,7 +125,7 @@ export default class RegistryApi {
       let accepts = ['application/json'];
       let returnType = Info;
       return this.apiClient.callApi(
-        '/model-state-management/subscriptions/{subscriptionId}/registries/{registryId}', 'DELETE',
+        '/subscriptions/{subscriptionId}/registries/{registryId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -144,6 +145,7 @@ export default class RegistryApi {
      * @param {Object} opts Optional parameters
      * @param {Number} opts.pageNumber Page Number
      * @param {Number} opts.pageSize Page Size
+     * @param {Array.<String>} opts.registryIds A list of registry string IDs. For example, ['registry0', 'registry12']. If empty, this field is ignored. Maximum IDs: 10,000
      * @param {module:api/RegistryApi~getRegistriesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ListDeviceRegistries}
      */
@@ -160,7 +162,8 @@ export default class RegistryApi {
       };
       let queryParams = {
         'pageNumber': opts['pageNumber'],
-        'pageSize': opts['pageSize']
+        'pageSize': opts['pageSize'],
+        'registryIds': this.apiClient.buildCollectionParam(opts['registryIds'], 'csv')
       };
       let headerParams = {
       };
@@ -172,7 +175,7 @@ export default class RegistryApi {
       let accepts = ['application/json'];
       let returnType = ListDeviceRegistries;
       return this.apiClient.callApi(
-        '/model-state-management/subscriptions/{subscriptionId}/registries', 'GET',
+        '/subscriptions/{subscriptionId}/registries', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -220,7 +223,60 @@ export default class RegistryApi {
       let accepts = ['application/json'];
       let returnType = DeviceRegistry;
       return this.apiClient.callApi(
-        '/model-state-management/subscriptions/{subscriptionId}/registries/{registryId}', 'GET',
+        '/subscriptions/{subscriptionId}/registries/{registryId}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sendBroadcastToDevices operation.
+     * @callback module:api/RegistryApi~sendBroadcastToDevicesCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Send  Broadcast To Devices
+     * @param {String} subscriptionid Subscription ID
+     * @param {String} registryId Registry ID
+     * @param {module:model/DeviceCommand} registry application/json
+     * @param {module:api/RegistryApi~sendBroadcastToDevicesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    sendBroadcastToDevices(subscriptionid, registryId, registry, callback) {
+      let postBody = registry;
+      // verify the required parameter 'subscriptionid' is set
+      if (subscriptionid === undefined || subscriptionid === null) {
+        throw new Error("Missing the required parameter 'subscriptionid' when calling sendBroadcastToDevices");
+      }
+      // verify the required parameter 'registryId' is set
+      if (registryId === undefined || registryId === null) {
+        throw new Error("Missing the required parameter 'registryId' when calling sendBroadcastToDevices");
+      }
+      // verify the required parameter 'registry' is set
+      if (registry === undefined || registry === null) {
+        throw new Error("Missing the required parameter 'registry' when calling sendBroadcastToDevices");
+      }
+
+      let pathParams = {
+        'subscriptionid': subscriptionid,
+        'registryId': registryId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apiKey', 'bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = Object;
+      return this.apiClient.callApi(
+        '/subscriptions/{subscriptionid}/registries/{registryId}/sendBroadcastToDevice', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -277,7 +333,7 @@ export default class RegistryApi {
       let accepts = ['application/json'];
       let returnType = DeviceRegistry;
       return this.apiClient.callApi(
-        '/model-state-management/subscriptions/{subscriptionId}/registries/{registryId}', 'PATCH',
+        '/subscriptions/{subscriptionId}/registries/{registryId}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

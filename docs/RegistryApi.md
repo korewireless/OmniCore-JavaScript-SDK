@@ -328,7 +328,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new OmniCoreModelAndStateManagementApi.RegistryApi();
 let subscriptionId = "subscriptionId_example"; // String | Subscription ID
 let registryId = "registryId_example"; // String | Registry ID
-let updateMask = "updateMask_example"; // String | values to be updated: eventNotificationConfigs,stateNotificationConfig.pubsub_topic_name,logNotificationConfig.pubsub_topic_name,jitrNotificationConfig.pubsub_topic_name,mqttConfig.mqtt_enabled_state,httpConfig.http_enabled_state,logLevel,credentials
+let updateMask = "updateMask_example"; // String | values to be updated: eventNotificationConfigs,stateNotificationConfig.pubsub_topic_name,logNotificationConfig.pubsub_topic_name,customOnboardNotificationConfig.pubsub_topic_name,mqttConfig.mqtt_enabled_state,httpConfig.http_enabled_state,logLevel,credentials,customOnboardEnabled
 let opts = {
   'registry': new OmniCoreModelAndStateManagementApi.DeviceRegistry() // DeviceRegistry | application/json
 };
@@ -348,7 +348,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscriptionId** | **String**| Subscription ID | 
  **registryId** | **String**| Registry ID | 
- **updateMask** | **String**| values to be updated: eventNotificationConfigs,stateNotificationConfig.pubsub_topic_name,logNotificationConfig.pubsub_topic_name,jitrNotificationConfig.pubsub_topic_name,mqttConfig.mqtt_enabled_state,httpConfig.http_enabled_state,logLevel,credentials | 
+ **updateMask** | **String**| values to be updated: eventNotificationConfigs,stateNotificationConfig.pubsub_topic_name,logNotificationConfig.pubsub_topic_name,customOnboardNotificationConfig.pubsub_topic_name,mqttConfig.mqtt_enabled_state,httpConfig.http_enabled_state,logLevel,credentials,customOnboardEnabled | 
  **registry** | [**DeviceRegistry**](DeviceRegistry.md)| application/json | [optional] 
 
 ### Return type

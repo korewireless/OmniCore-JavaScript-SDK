@@ -91,8 +91,11 @@ class DeviceRegistry {
             if (data.hasOwnProperty('stateNotificationConfig')) {
                 obj['stateNotificationConfig'] = NotificationConfig.constructFromObject(data['stateNotificationConfig']);
             }
-            if (data.hasOwnProperty('jitrNotificationConfig')) {
-                obj['jitrNotificationConfig'] = NotificationConfig.constructFromObject(data['jitrNotificationConfig']);
+            if (data.hasOwnProperty('customOnboardNotificationConfig')) {
+                obj['customOnboardNotificationConfig'] = NotificationConfig.constructFromObject(data['customOnboardNotificationConfig']);
+            }
+            if (data.hasOwnProperty('customOnboardEnabled')) {
+                obj['customOnboardEnabled'] = ApiClient.convertToType(data['customOnboardEnabled'], 'Boolean');
             }
             if (data.hasOwnProperty('numberOfDevices')) {
                 obj['numberOfDevices'] = ApiClient.convertToType(data['numberOfDevices'], 'Number');
@@ -172,9 +175,9 @@ class DeviceRegistry {
         if (data['stateNotificationConfig']) { // data not null
           NotificationConfig.validateJSON(data['stateNotificationConfig']);
         }
-        // validate the optional field `jitrNotificationConfig`
-        if (data['jitrNotificationConfig']) { // data not null
-          NotificationConfig.validateJSON(data['jitrNotificationConfig']);
+        // validate the optional field `customOnboardNotificationConfig`
+        if (data['customOnboardNotificationConfig']) { // data not null
+          NotificationConfig.validateJSON(data['customOnboardNotificationConfig']);
         }
 
         return true;
@@ -246,9 +249,14 @@ DeviceRegistry.prototype['logNotificationConfig'] = undefined;
 DeviceRegistry.prototype['stateNotificationConfig'] = undefined;
 
 /**
- * @member {module:model/NotificationConfig} jitrNotificationConfig
+ * @member {module:model/NotificationConfig} customOnboardNotificationConfig
  */
-DeviceRegistry.prototype['jitrNotificationConfig'] = undefined;
+DeviceRegistry.prototype['customOnboardNotificationConfig'] = undefined;
+
+/**
+ * @member {Boolean} customOnboardEnabled
+ */
+DeviceRegistry.prototype['customOnboardEnabled'] = undefined;
 
 /**
  * @member {Number} numberOfDevices

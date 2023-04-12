@@ -51,6 +51,9 @@ class RegistryCredential {
             if (data.hasOwnProperty('publicKeyCertificate')) {
                 obj['publicKeyCertificate'] = PublicKeyCertificate.constructFromObject(data['publicKeyCertificate']);
             }
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
         }
         return obj;
     }
@@ -65,6 +68,10 @@ class RegistryCredential {
         if (data['publicKeyCertificate']) { // data not null
           PublicKeyCertificate.validateJSON(data['publicKeyCertificate']);
         }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
 
         return true;
     }
@@ -78,6 +85,11 @@ class RegistryCredential {
  * @member {module:model/PublicKeyCertificate} publicKeyCertificate
  */
 RegistryCredential.prototype['publicKeyCertificate'] = undefined;
+
+/**
+ * @member {String} id
+ */
+RegistryCredential.prototype['id'] = undefined;
 
 
 

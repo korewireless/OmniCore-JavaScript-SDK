@@ -51,6 +51,9 @@ class DeviceCredential {
             if (data.hasOwnProperty('expirationTime')) {
                 obj['expirationTime'] = ApiClient.convertToType(data['expirationTime'], 'String');
             }
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
             if (data.hasOwnProperty('publicKey')) {
                 obj['publicKey'] = PublicKeyCredential.constructFromObject(data['publicKey']);
             }
@@ -67,6 +70,10 @@ class DeviceCredential {
         // ensure the json data is a string
         if (data['expirationTime'] && !(typeof data['expirationTime'] === 'string' || data['expirationTime'] instanceof String)) {
             throw new Error("Expected the field `expirationTime` to be a primitive type in the JSON string but got " + data['expirationTime']);
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
         }
         // validate the optional field `publicKey`
         if (data['publicKey']) { // data not null
@@ -86,6 +93,11 @@ class DeviceCredential {
  * @member {String} expirationTime
  */
 DeviceCredential.prototype['expirationTime'] = undefined;
+
+/**
+ * @member {String} id
+ */
+DeviceCredential.prototype['id'] = undefined;
 
 /**
  * @member {module:model/PublicKeyCredential} publicKey

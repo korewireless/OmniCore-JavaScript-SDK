@@ -294,7 +294,7 @@ export default class RegistryApi {
      * Update a registry
      * @param {String} subscriptionId Subscription ID
      * @param {String} registryId Registry ID
-     * @param {module:model/String} updateMask values to be updated: eventNotificationConfigs,stateNotificationConfig.pubsub_topic_name,logNotificationConfig.pubsub_topic_name,jitrNotificationConfig.pubsub_topic_name,mqttConfig.mqtt_enabled_state,httpConfig.http_enabled_state,logLevel,credentials
+     * @param {module:model/String} updateMask values to be updated: eventNotificationConfigs,stateNotificationConfig.pubsub_topic_name,logNotificationConfig.pubsub_topic_name,customOnboardNotificationConfig.pubsub_topic_name,mqttConfig.mqtt_enabled_state,httpConfig.http_enabled_state,logLevel,credentials,customOnboardEnabled
      * @param {Object} opts Optional parameters
      * @param {module:model/DeviceRegistry} opts.registry application/json
      * @param {module:api/RegistryApi~updateRegistryCallback} callback The callback function, accepting three arguments: error, data, response

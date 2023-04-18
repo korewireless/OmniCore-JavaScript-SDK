@@ -16,6 +16,7 @@ import ApiClient from './ApiClient';
 import BindRequest from './model/BindRequest';
 import BindRequestIdsGateway from './model/BindRequestIdsGateway';
 import BlockCommunicationBody from './model/BlockCommunicationBody';
+import CustomOnboard from './model/CustomOnboard';
 import Device from './model/Device';
 import DeviceCommand from './model/DeviceCommand';
 import DeviceConfig from './model/DeviceConfig';
@@ -101,6 +102,12 @@ export {
      * @property {module:model/BlockCommunicationBody}
      */
     BlockCommunicationBody,
+
+    /**
+     * The CustomOnboard model constructor.
+     * @property {module:model/CustomOnboard}
+     */
+    CustomOnboard,
 
     /**
      * The Device model constructor.

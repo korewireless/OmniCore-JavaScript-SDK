@@ -128,7 +128,7 @@ api.bindDevice(subscriptionId, registryId, device, callback);
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.omnicore.korewireless.com/model-state-management*
+All URIs are relative to *https://api.korewireless.com/omnicore*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -145,6 +145,7 @@ Class | Method | HTTP request | Description
 *OmniCoreModelAndStateManagementApi.DeviceApi* | [**unBindDevice**](docs/DeviceApi.md#unBindDevice) | **POST** /subscriptions/{subscriptionId}/registries/{registryId}/unbindDeviceFromGateway | 
 *OmniCoreModelAndStateManagementApi.DeviceApi* | [**unBindDevices**](docs/DeviceApi.md#unBindDevices) | **POST** /subscriptions/{subscriptionId}/registries/{registryId}/unbindDevicesFromGateway | 
 *OmniCoreModelAndStateManagementApi.DeviceApi* | [**updateConfigurationToDevice**](docs/DeviceApi.md#updateConfigurationToDevice) | **POST** /subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/updateConfigurationToDevice | 
+*OmniCoreModelAndStateManagementApi.DeviceApi* | [**updateCustomOnboardRequest**](docs/DeviceApi.md#updateCustomOnboardRequest) | **POST** /subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/updateCustomOnboardRequest | 
 *OmniCoreModelAndStateManagementApi.DeviceApi* | [**updateDevice**](docs/DeviceApi.md#updateDevice) | **PATCH** /subscriptions/{subscriptionId}/registries/{registryId}/devices/{deviceId} | 
 *OmniCoreModelAndStateManagementApi.RegistryApi* | [**createRegistry**](docs/RegistryApi.md#createRegistry) | **POST** /subscriptions/{subscriptionId}/registries | 
 *OmniCoreModelAndStateManagementApi.RegistryApi* | [**deleteRegistry**](docs/RegistryApi.md#deleteRegistry) | **DELETE** /subscriptions/{subscriptionId}/registries/{registryId} | 
@@ -159,6 +160,7 @@ Class | Method | HTTP request | Description
  - [OmniCoreModelAndStateManagementApi.BindRequest](docs/BindRequest.md)
  - [OmniCoreModelAndStateManagementApi.BindRequestIdsGateway](docs/BindRequestIdsGateway.md)
  - [OmniCoreModelAndStateManagementApi.BlockCommunicationBody](docs/BlockCommunicationBody.md)
+ - [OmniCoreModelAndStateManagementApi.CustomOnboard](docs/CustomOnboard.md)
  - [OmniCoreModelAndStateManagementApi.Device](docs/Device.md)
  - [OmniCoreModelAndStateManagementApi.DeviceCommand](docs/DeviceCommand.md)
  - [OmniCoreModelAndStateManagementApi.DeviceConfig](docs/DeviceConfig.md)

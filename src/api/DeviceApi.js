@@ -16,6 +16,7 @@ import ApiClient from "../ApiClient";
 import BindRequest from '../model/BindRequest';
 import BindRequestIdsGateway from '../model/BindRequestIdsGateway';
 import BlockCommunicationBody from '../model/BlockCommunicationBody';
+import CustomOnboard from '../model/CustomOnboard';
 import Device from '../model/Device';
 import DeviceCommand from '../model/DeviceCommand';
 import DeviceConfig from '../model/DeviceConfig';
@@ -772,6 +773,65 @@ export default class DeviceApi {
       let returnType = DeviceConfig;
       return this.apiClient.callApi(
         '/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/updateConfigurationToDevice', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateCustomOnboardRequest operation.
+     * @callback module:api/DeviceApi~updateCustomOnboardRequestCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Info} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Approve/Reject a Custom Onboard Request
+     * @param {String} subscriptionid Subscription ID
+     * @param {String} registryId Registry ID
+     * @param {String} deviceId Device ID
+     * @param {module:model/CustomOnboard} device application/json
+     * @param {module:api/DeviceApi~updateCustomOnboardRequestCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Info}
+     */
+    updateCustomOnboardRequest(subscriptionid, registryId, deviceId, device, callback) {
+      let postBody = device;
+      // verify the required parameter 'subscriptionid' is set
+      if (subscriptionid === undefined || subscriptionid === null) {
+        throw new Error("Missing the required parameter 'subscriptionid' when calling updateCustomOnboardRequest");
+      }
+      // verify the required parameter 'registryId' is set
+      if (registryId === undefined || registryId === null) {
+        throw new Error("Missing the required parameter 'registryId' when calling updateCustomOnboardRequest");
+      }
+      // verify the required parameter 'deviceId' is set
+      if (deviceId === undefined || deviceId === null) {
+        throw new Error("Missing the required parameter 'deviceId' when calling updateCustomOnboardRequest");
+      }
+      // verify the required parameter 'device' is set
+      if (device === undefined || device === null) {
+        throw new Error("Missing the required parameter 'device' when calling updateCustomOnboardRequest");
+      }
+
+      let pathParams = {
+        'subscriptionid': subscriptionid,
+        'registryId': registryId,
+        'deviceId': deviceId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apiKey', 'bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = Info;
+      return this.apiClient.callApi(
+        '/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/updateCustomOnboardRequest', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

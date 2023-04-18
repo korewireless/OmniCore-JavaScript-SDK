@@ -1,6 +1,6 @@
 # OmniCoreModelAndStateManagementApi.DeviceApi
 
-All URIs are relative to *https://api.omnicore.korewireless.com/model-state-management*
+All URIs are relative to *https://api.korewireless.com/omnicore*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**unBindDevice**](DeviceApi.md#unBindDevice) | **POST** /subscriptions/{subscriptionId}/registries/{registryId}/unbindDeviceFromGateway | 
 [**unBindDevices**](DeviceApi.md#unBindDevices) | **POST** /subscriptions/{subscriptionId}/registries/{registryId}/unbindDevicesFromGateway | 
 [**updateConfigurationToDevice**](DeviceApi.md#updateConfigurationToDevice) | **POST** /subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/updateConfigurationToDevice | 
+[**updateCustomOnboardRequest**](DeviceApi.md#updateCustomOnboardRequest) | **POST** /subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/updateCustomOnboardRequest | 
 [**updateDevice**](DeviceApi.md#updateDevice) | **PATCH** /subscriptions/{subscriptionId}/registries/{registryId}/devices/{deviceId} | 
 
 
@@ -794,6 +795,66 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DeviceConfig**](DeviceConfig.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## updateCustomOnboardRequest
+
+> Info updateCustomOnboardRequest(subscriptionid, registryId, deviceId, device)
+
+
+
+Approve/Reject a Custom Onboard Request
+
+### Example
+
+```javascript
+import OmniCoreModelAndStateManagementApi from 'omni_core_model_and_state_management_api';
+let defaultClient = OmniCoreModelAndStateManagementApi.ApiClient.instance;
+// Configure API key authorization: apiKey
+let apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new OmniCoreModelAndStateManagementApi.DeviceApi();
+let subscriptionid = "subscriptionid_example"; // String | Subscription ID
+let registryId = "registryId_example"; // String | Registry ID
+let deviceId = "deviceId_example"; // String | Device ID
+let device = new OmniCoreModelAndStateManagementApi.CustomOnboard(); // CustomOnboard | application/json
+apiInstance.updateCustomOnboardRequest(subscriptionid, registryId, deviceId, device, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subscriptionid** | **String**| Subscription ID | 
+ **registryId** | **String**| Registry ID | 
+ **deviceId** | **String**| Device ID | 
+ **device** | [**CustomOnboard**](CustomOnboard.md)| application/json | 
+
+### Return type
+
+[**Info**](Info.md)
 
 ### Authorization
 

@@ -241,12 +241,12 @@ export default class RegistryApi {
      * Send  Broadcast To Devices
      * @param {String} subscriptionid Subscription ID
      * @param {String} registryId Registry ID
-     * @param {module:model/DeviceCommand} registry application/json
+     * @param {module:model/DeviceCommand} broadcast application/json
      * @param {module:api/RegistryApi~sendBroadcastToDevicesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
-    sendBroadcastToDevices(subscriptionid, registryId, registry, callback) {
-      let postBody = registry;
+    sendBroadcastToDevices(subscriptionid, registryId, broadcast, callback) {
+      let postBody = broadcast;
       // verify the required parameter 'subscriptionid' is set
       if (subscriptionid === undefined || subscriptionid === null) {
         throw new Error("Missing the required parameter 'subscriptionid' when calling sendBroadcastToDevices");
@@ -255,9 +255,9 @@ export default class RegistryApi {
       if (registryId === undefined || registryId === null) {
         throw new Error("Missing the required parameter 'registryId' when calling sendBroadcastToDevices");
       }
-      // verify the required parameter 'registry' is set
-      if (registry === undefined || registry === null) {
-        throw new Error("Missing the required parameter 'registry' when calling sendBroadcastToDevices");
+      // verify the required parameter 'broadcast' is set
+      if (broadcast === undefined || broadcast === null) {
+        throw new Error("Missing the required parameter 'broadcast' when calling sendBroadcastToDevices");
       }
 
       let pathParams = {

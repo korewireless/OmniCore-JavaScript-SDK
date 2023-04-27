@@ -114,7 +114,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 var api = new OmniCoreModelAndStateManagementApi.DeviceApi()
 var subscriptionId = "subscriptionId_example"; // {String} Subscription ID
 var registryId = "registryId_example"; // {String} Registry ID
-var device = new OmniCoreModelAndStateManagementApi.BindRequest(); // {BindRequest} application/json
+var bind = new OmniCoreModelAndStateManagementApi.BindRequest(); // {BindRequest} application/json
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -122,7 +122,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.bindDevice(subscriptionId, registryId, device, callback);
+api.bindDevice(subscriptionId, registryId, bind, callback);
 
 ```
 

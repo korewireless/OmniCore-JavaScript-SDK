@@ -24,7 +24,7 @@ Method | HTTP request | Description
 
 ## bindDevice
 
-> Info bindDevice(subscriptionId, registryId, device)
+> Info bindDevice(subscriptionId, registryId, bind)
 
 
 
@@ -47,8 +47,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new OmniCoreModelAndStateManagementApi.DeviceApi();
 let subscriptionId = "subscriptionId_example"; // String | Subscription ID
 let registryId = "registryId_example"; // String | Registry ID
-let device = new OmniCoreModelAndStateManagementApi.BindRequest(); // BindRequest | application/json
-apiInstance.bindDevice(subscriptionId, registryId, device, (error, data, response) => {
+let bind = new OmniCoreModelAndStateManagementApi.BindRequest(); // BindRequest | application/json
+apiInstance.bindDevice(subscriptionId, registryId, bind, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscriptionId** | **String**| Subscription ID | 
  **registryId** | **String**| Registry ID | 
- **device** | [**BindRequest**](BindRequest.md)| application/json | 
+ **bind** | [**BindRequest**](BindRequest.md)| application/json | 
 
 ### Return type
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 ## bindDevices
 
-> Info bindDevices(subscriptionId, registryId, device)
+> Info bindDevices(subscriptionId, registryId, bind)
 
 
 
@@ -105,8 +105,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new OmniCoreModelAndStateManagementApi.DeviceApi();
 let subscriptionId = "subscriptionId_example"; // String | Subscription ID
 let registryId = "registryId_example"; // String | Registry ID
-let device = new OmniCoreModelAndStateManagementApi.BindRequestIdsGateway(); // BindRequestIdsGateway | application/json
-apiInstance.bindDevices(subscriptionId, registryId, device, (error, data, response) => {
+let bind = new OmniCoreModelAndStateManagementApi.BindRequestIdsGateway(); // BindRequestIdsGateway | application/json
+apiInstance.bindDevices(subscriptionId, registryId, bind, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscriptionId** | **String**| Subscription ID | 
  **registryId** | **String**| Registry ID | 
- **device** | [**BindRequestIdsGateway**](BindRequestIdsGateway.md)| application/json | 
+ **bind** | [**BindRequestIdsGateway**](BindRequestIdsGateway.md)| application/json | 
 
 ### Return type
 
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 
 ## blockDeviceCommuncation
 
-> Object blockDeviceCommuncation(subscriptionid, registryId, deviceId, device)
+> Object blockDeviceCommuncation(subscriptionid, registryId, deviceId, block)
 
 
 
@@ -164,8 +164,8 @@ let apiInstance = new OmniCoreModelAndStateManagementApi.DeviceApi();
 let subscriptionid = "subscriptionid_example"; // String | Subscription ID
 let registryId = "registryId_example"; // String | Registry ID
 let deviceId = "deviceId_example"; // String | Device ID
-let device = new OmniCoreModelAndStateManagementApi.BlockCommunicationBody(); // BlockCommunicationBody | application/json
-apiInstance.blockDeviceCommuncation(subscriptionid, registryId, deviceId, device, (error, data, response) => {
+let block = new OmniCoreModelAndStateManagementApi.BlockCommunicationBody(); // BlockCommunicationBody | application/json
+apiInstance.blockDeviceCommuncation(subscriptionid, registryId, deviceId, block, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
  **subscriptionid** | **String**| Subscription ID | 
  **registryId** | **String**| Registry ID | 
  **deviceId** | **String**| Device ID | 
- **device** | [**BlockCommunicationBody**](BlockCommunicationBody.md)| application/json | 
+ **block** | [**BlockCommunicationBody**](BlockCommunicationBody.md)| application/json | 
 
 ### Return type
 
@@ -572,7 +572,7 @@ Name | Type | Description  | Notes
 
 ## sendCommandToDevice
 
-> Object sendCommandToDevice(subscriptionid, registryId, deviceId, device)
+> Object sendCommandToDevice(subscriptionid, registryId, deviceId, command)
 
 
 
@@ -596,8 +596,8 @@ let apiInstance = new OmniCoreModelAndStateManagementApi.DeviceApi();
 let subscriptionid = "subscriptionid_example"; // String | Subscription ID
 let registryId = "registryId_example"; // String | Registry ID
 let deviceId = "deviceId_example"; // String | Device ID
-let device = new OmniCoreModelAndStateManagementApi.DeviceCommand(); // DeviceCommand | application/json
-apiInstance.sendCommandToDevice(subscriptionid, registryId, deviceId, device, (error, data, response) => {
+let command = new OmniCoreModelAndStateManagementApi.DeviceCommand(); // DeviceCommand | application/json
+apiInstance.sendCommandToDevice(subscriptionid, registryId, deviceId, command, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -614,7 +614,7 @@ Name | Type | Description  | Notes
  **subscriptionid** | **String**| Subscription ID | 
  **registryId** | **String**| Registry ID | 
  **deviceId** | **String**| Device ID | 
- **device** | [**DeviceCommand**](DeviceCommand.md)| application/json | 
+ **command** | [**DeviceCommand**](DeviceCommand.md)| application/json | 
 
 ### Return type
 
@@ -632,7 +632,7 @@ Name | Type | Description  | Notes
 
 ## unBindDevice
 
-> Info unBindDevice(subscriptionId, registryId, device)
+> Info unBindDevice(subscriptionId, registryId, unbind)
 
 
 
@@ -655,8 +655,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new OmniCoreModelAndStateManagementApi.DeviceApi();
 let subscriptionId = "subscriptionId_example"; // String | Subscription ID
 let registryId = "registryId_example"; // String | Registry ID
-let device = new OmniCoreModelAndStateManagementApi.BindRequest(); // BindRequest | application/json
-apiInstance.unBindDevice(subscriptionId, registryId, device, (error, data, response) => {
+let unbind = new OmniCoreModelAndStateManagementApi.BindRequest(); // BindRequest | application/json
+apiInstance.unBindDevice(subscriptionId, registryId, unbind, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -672,7 +672,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscriptionId** | **String**| Subscription ID | 
  **registryId** | **String**| Registry ID | 
- **device** | [**BindRequest**](BindRequest.md)| application/json | 
+ **unbind** | [**BindRequest**](BindRequest.md)| application/json | 
 
 ### Return type
 
@@ -690,7 +690,7 @@ Name | Type | Description  | Notes
 
 ## unBindDevices
 
-> Info unBindDevices(subscriptionId, registryId, device)
+> Info unBindDevices(subscriptionId, registryId, unbind)
 
 
 
@@ -713,8 +713,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new OmniCoreModelAndStateManagementApi.DeviceApi();
 let subscriptionId = "subscriptionId_example"; // String | Subscription ID
 let registryId = "registryId_example"; // String | Registry ID
-let device = new OmniCoreModelAndStateManagementApi.BindRequestIdsGateway(); // BindRequestIdsGateway | application/json
-apiInstance.unBindDevices(subscriptionId, registryId, device, (error, data, response) => {
+let unbind = new OmniCoreModelAndStateManagementApi.BindRequestIdsGateway(); // BindRequestIdsGateway | application/json
+apiInstance.unBindDevices(subscriptionId, registryId, unbind, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -730,7 +730,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscriptionId** | **String**| Subscription ID | 
  **registryId** | **String**| Registry ID | 
- **device** | [**BindRequestIdsGateway**](BindRequestIdsGateway.md)| application/json | 
+ **unbind** | [**BindRequestIdsGateway**](BindRequestIdsGateway.md)| application/json | 
 
 ### Return type
 
@@ -748,7 +748,7 @@ Name | Type | Description  | Notes
 
 ## updateConfigurationToDevice
 
-> DeviceConfig updateConfigurationToDevice(subscriptionid, registryId, deviceId, device)
+> DeviceConfig updateConfigurationToDevice(subscriptionid, registryId, deviceId, configuration)
 
 
 
@@ -772,8 +772,8 @@ let apiInstance = new OmniCoreModelAndStateManagementApi.DeviceApi();
 let subscriptionid = "subscriptionid_example"; // String | Subscription ID
 let registryId = "registryId_example"; // String | Registry ID
 let deviceId = "deviceId_example"; // String | Device ID
-let device = new OmniCoreModelAndStateManagementApi.DeviceConfiguration(); // DeviceConfiguration | application/json
-apiInstance.updateConfigurationToDevice(subscriptionid, registryId, deviceId, device, (error, data, response) => {
+let configuration = new OmniCoreModelAndStateManagementApi.DeviceConfiguration(); // DeviceConfiguration | application/json
+apiInstance.updateConfigurationToDevice(subscriptionid, registryId, deviceId, configuration, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -790,7 +790,7 @@ Name | Type | Description  | Notes
  **subscriptionid** | **String**| Subscription ID | 
  **registryId** | **String**| Registry ID | 
  **deviceId** | **String**| Device ID | 
- **device** | [**DeviceConfiguration**](DeviceConfiguration.md)| application/json | 
+ **configuration** | [**DeviceConfiguration**](DeviceConfiguration.md)| application/json | 
 
 ### Return type
 
@@ -808,7 +808,7 @@ Name | Type | Description  | Notes
 
 ## updateCustomOnboardRequest
 
-> Info updateCustomOnboardRequest(subscriptionid, registryId, deviceId, device)
+> Info updateCustomOnboardRequest(subscriptionid, registryId, deviceId, customOnboard)
 
 
 
@@ -832,8 +832,8 @@ let apiInstance = new OmniCoreModelAndStateManagementApi.DeviceApi();
 let subscriptionid = "subscriptionid_example"; // String | Subscription ID
 let registryId = "registryId_example"; // String | Registry ID
 let deviceId = "deviceId_example"; // String | Device ID
-let device = new OmniCoreModelAndStateManagementApi.CustomOnboard(); // CustomOnboard | application/json
-apiInstance.updateCustomOnboardRequest(subscriptionid, registryId, deviceId, device, (error, data, response) => {
+let customOnboard = new OmniCoreModelAndStateManagementApi.CustomOnboard(); // CustomOnboard | application/json
+apiInstance.updateCustomOnboardRequest(subscriptionid, registryId, deviceId, customOnboard, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -850,7 +850,7 @@ Name | Type | Description  | Notes
  **subscriptionid** | **String**| Subscription ID | 
  **registryId** | **String**| Registry ID | 
  **deviceId** | **String**| Device ID | 
- **device** | [**CustomOnboard**](CustomOnboard.md)| application/json | 
+ **customOnboard** | [**CustomOnboard**](CustomOnboard.md)| application/json | 
 
 ### Return type
 

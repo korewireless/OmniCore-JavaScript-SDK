@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
 
 ## sendBroadcastToDevices
 
-> Object sendBroadcastToDevices(subscriptionid, registryId, registry)
+> Object sendBroadcastToDevices(subscriptionid, registryId, broadcast)
 
 
 
@@ -270,8 +270,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new OmniCoreModelAndStateManagementApi.RegistryApi();
 let subscriptionid = "subscriptionid_example"; // String | Subscription ID
 let registryId = "registryId_example"; // String | Registry ID
-let registry = new OmniCoreModelAndStateManagementApi.DeviceCommand(); // DeviceCommand | application/json
-apiInstance.sendBroadcastToDevices(subscriptionid, registryId, registry, (error, data, response) => {
+let broadcast = new OmniCoreModelAndStateManagementApi.DeviceCommand(); // DeviceCommand | application/json
+apiInstance.sendBroadcastToDevices(subscriptionid, registryId, broadcast, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscriptionid** | **String**| Subscription ID | 
  **registryId** | **String**| Registry ID | 
- **registry** | [**DeviceCommand**](DeviceCommand.md)| application/json | 
+ **broadcast** | [**DeviceCommand**](DeviceCommand.md)| application/json | 
 
 ### Return type
 

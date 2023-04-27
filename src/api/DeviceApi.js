@@ -58,12 +58,12 @@ export default class DeviceApi {
      * Bind  a device to a gateway under a registry
      * @param {String} subscriptionId Subscription ID
      * @param {String} registryId Registry ID
-     * @param {module:model/BindRequest} device application/json
+     * @param {module:model/BindRequest} bind application/json
      * @param {module:api/DeviceApi~bindDeviceCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Info}
      */
-    bindDevice(subscriptionId, registryId, device, callback) {
-      let postBody = device;
+    bindDevice(subscriptionId, registryId, bind, callback) {
+      let postBody = bind;
       // verify the required parameter 'subscriptionId' is set
       if (subscriptionId === undefined || subscriptionId === null) {
         throw new Error("Missing the required parameter 'subscriptionId' when calling bindDevice");
@@ -72,9 +72,9 @@ export default class DeviceApi {
       if (registryId === undefined || registryId === null) {
         throw new Error("Missing the required parameter 'registryId' when calling bindDevice");
       }
-      // verify the required parameter 'device' is set
-      if (device === undefined || device === null) {
-        throw new Error("Missing the required parameter 'device' when calling bindDevice");
+      // verify the required parameter 'bind' is set
+      if (bind === undefined || bind === null) {
+        throw new Error("Missing the required parameter 'bind' when calling bindDevice");
       }
 
       let pathParams = {
@@ -111,12 +111,12 @@ export default class DeviceApi {
      * Bind devices to a gateway under a registry
      * @param {String} subscriptionId Subscription ID
      * @param {String} registryId Registry ID
-     * @param {module:model/BindRequestIdsGateway} device application/json
+     * @param {module:model/BindRequestIdsGateway} bind application/json
      * @param {module:api/DeviceApi~bindDevicesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Info}
      */
-    bindDevices(subscriptionId, registryId, device, callback) {
-      let postBody = device;
+    bindDevices(subscriptionId, registryId, bind, callback) {
+      let postBody = bind;
       // verify the required parameter 'subscriptionId' is set
       if (subscriptionId === undefined || subscriptionId === null) {
         throw new Error("Missing the required parameter 'subscriptionId' when calling bindDevices");
@@ -125,9 +125,9 @@ export default class DeviceApi {
       if (registryId === undefined || registryId === null) {
         throw new Error("Missing the required parameter 'registryId' when calling bindDevices");
       }
-      // verify the required parameter 'device' is set
-      if (device === undefined || device === null) {
-        throw new Error("Missing the required parameter 'device' when calling bindDevices");
+      // verify the required parameter 'bind' is set
+      if (bind === undefined || bind === null) {
+        throw new Error("Missing the required parameter 'bind' when calling bindDevices");
       }
 
       let pathParams = {
@@ -165,12 +165,12 @@ export default class DeviceApi {
      * @param {String} subscriptionid Subscription ID
      * @param {String} registryId Registry ID
      * @param {String} deviceId Device ID
-     * @param {module:model/BlockCommunicationBody} device application/json
+     * @param {module:model/BlockCommunicationBody} block application/json
      * @param {module:api/DeviceApi~blockDeviceCommuncationCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
-    blockDeviceCommuncation(subscriptionid, registryId, deviceId, device, callback) {
-      let postBody = device;
+    blockDeviceCommuncation(subscriptionid, registryId, deviceId, block, callback) {
+      let postBody = block;
       // verify the required parameter 'subscriptionid' is set
       if (subscriptionid === undefined || subscriptionid === null) {
         throw new Error("Missing the required parameter 'subscriptionid' when calling blockDeviceCommuncation");
@@ -183,9 +183,9 @@ export default class DeviceApi {
       if (deviceId === undefined || deviceId === null) {
         throw new Error("Missing the required parameter 'deviceId' when calling blockDeviceCommuncation");
       }
-      // verify the required parameter 'device' is set
-      if (device === undefined || device === null) {
-        throw new Error("Missing the required parameter 'device' when calling blockDeviceCommuncation");
+      // verify the required parameter 'block' is set
+      if (block === undefined || block === null) {
+        throw new Error("Missing the required parameter 'block' when calling blockDeviceCommuncation");
       }
 
       let pathParams = {
@@ -567,12 +567,12 @@ export default class DeviceApi {
      * @param {String} subscriptionid Subscription ID
      * @param {String} registryId Registry ID
      * @param {String} deviceId Device ID
-     * @param {module:model/DeviceCommand} device application/json
+     * @param {module:model/DeviceCommand} command application/json
      * @param {module:api/DeviceApi~sendCommandToDeviceCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
-    sendCommandToDevice(subscriptionid, registryId, deviceId, device, callback) {
-      let postBody = device;
+    sendCommandToDevice(subscriptionid, registryId, deviceId, command, callback) {
+      let postBody = command;
       // verify the required parameter 'subscriptionid' is set
       if (subscriptionid === undefined || subscriptionid === null) {
         throw new Error("Missing the required parameter 'subscriptionid' when calling sendCommandToDevice");
@@ -585,9 +585,9 @@ export default class DeviceApi {
       if (deviceId === undefined || deviceId === null) {
         throw new Error("Missing the required parameter 'deviceId' when calling sendCommandToDevice");
       }
-      // verify the required parameter 'device' is set
-      if (device === undefined || device === null) {
-        throw new Error("Missing the required parameter 'device' when calling sendCommandToDevice");
+      // verify the required parameter 'command' is set
+      if (command === undefined || command === null) {
+        throw new Error("Missing the required parameter 'command' when calling sendCommandToDevice");
       }
 
       let pathParams = {
@@ -625,12 +625,12 @@ export default class DeviceApi {
      * UnBind  a device from a gateway under a registry
      * @param {String} subscriptionId Subscription ID
      * @param {String} registryId Registry ID
-     * @param {module:model/BindRequest} device application/json
+     * @param {module:model/BindRequest} unbind application/json
      * @param {module:api/DeviceApi~unBindDeviceCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Info}
      */
-    unBindDevice(subscriptionId, registryId, device, callback) {
-      let postBody = device;
+    unBindDevice(subscriptionId, registryId, unbind, callback) {
+      let postBody = unbind;
       // verify the required parameter 'subscriptionId' is set
       if (subscriptionId === undefined || subscriptionId === null) {
         throw new Error("Missing the required parameter 'subscriptionId' when calling unBindDevice");
@@ -639,9 +639,9 @@ export default class DeviceApi {
       if (registryId === undefined || registryId === null) {
         throw new Error("Missing the required parameter 'registryId' when calling unBindDevice");
       }
-      // verify the required parameter 'device' is set
-      if (device === undefined || device === null) {
-        throw new Error("Missing the required parameter 'device' when calling unBindDevice");
+      // verify the required parameter 'unbind' is set
+      if (unbind === undefined || unbind === null) {
+        throw new Error("Missing the required parameter 'unbind' when calling unBindDevice");
       }
 
       let pathParams = {
@@ -678,12 +678,12 @@ export default class DeviceApi {
      * UnBind devices from a gateway under a registry
      * @param {String} subscriptionId Subscription ID
      * @param {String} registryId Registry ID
-     * @param {module:model/BindRequestIdsGateway} device application/json
+     * @param {module:model/BindRequestIdsGateway} unbind application/json
      * @param {module:api/DeviceApi~unBindDevicesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Info}
      */
-    unBindDevices(subscriptionId, registryId, device, callback) {
-      let postBody = device;
+    unBindDevices(subscriptionId, registryId, unbind, callback) {
+      let postBody = unbind;
       // verify the required parameter 'subscriptionId' is set
       if (subscriptionId === undefined || subscriptionId === null) {
         throw new Error("Missing the required parameter 'subscriptionId' when calling unBindDevices");
@@ -692,9 +692,9 @@ export default class DeviceApi {
       if (registryId === undefined || registryId === null) {
         throw new Error("Missing the required parameter 'registryId' when calling unBindDevices");
       }
-      // verify the required parameter 'device' is set
-      if (device === undefined || device === null) {
-        throw new Error("Missing the required parameter 'device' when calling unBindDevices");
+      // verify the required parameter 'unbind' is set
+      if (unbind === undefined || unbind === null) {
+        throw new Error("Missing the required parameter 'unbind' when calling unBindDevices");
       }
 
       let pathParams = {
@@ -732,12 +732,12 @@ export default class DeviceApi {
      * @param {String} subscriptionid Subscription ID
      * @param {String} registryId Registry ID
      * @param {String} deviceId Device ID
-     * @param {module:model/DeviceConfiguration} device application/json
+     * @param {module:model/DeviceConfiguration} configuration application/json
      * @param {module:api/DeviceApi~updateConfigurationToDeviceCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/DeviceConfig}
      */
-    updateConfigurationToDevice(subscriptionid, registryId, deviceId, device, callback) {
-      let postBody = device;
+    updateConfigurationToDevice(subscriptionid, registryId, deviceId, configuration, callback) {
+      let postBody = configuration;
       // verify the required parameter 'subscriptionid' is set
       if (subscriptionid === undefined || subscriptionid === null) {
         throw new Error("Missing the required parameter 'subscriptionid' when calling updateConfigurationToDevice");
@@ -750,9 +750,9 @@ export default class DeviceApi {
       if (deviceId === undefined || deviceId === null) {
         throw new Error("Missing the required parameter 'deviceId' when calling updateConfigurationToDevice");
       }
-      // verify the required parameter 'device' is set
-      if (device === undefined || device === null) {
-        throw new Error("Missing the required parameter 'device' when calling updateConfigurationToDevice");
+      // verify the required parameter 'configuration' is set
+      if (configuration === undefined || configuration === null) {
+        throw new Error("Missing the required parameter 'configuration' when calling updateConfigurationToDevice");
       }
 
       let pathParams = {
@@ -791,12 +791,12 @@ export default class DeviceApi {
      * @param {String} subscriptionid Subscription ID
      * @param {String} registryId Registry ID
      * @param {String} deviceId Device ID
-     * @param {module:model/CustomOnboard} device application/json
+     * @param {module:model/CustomOnboard} customOnboard application/json
      * @param {module:api/DeviceApi~updateCustomOnboardRequestCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Info}
      */
-    updateCustomOnboardRequest(subscriptionid, registryId, deviceId, device, callback) {
-      let postBody = device;
+    updateCustomOnboardRequest(subscriptionid, registryId, deviceId, customOnboard, callback) {
+      let postBody = customOnboard;
       // verify the required parameter 'subscriptionid' is set
       if (subscriptionid === undefined || subscriptionid === null) {
         throw new Error("Missing the required parameter 'subscriptionid' when calling updateCustomOnboardRequest");
@@ -809,9 +809,9 @@ export default class DeviceApi {
       if (deviceId === undefined || deviceId === null) {
         throw new Error("Missing the required parameter 'deviceId' when calling updateCustomOnboardRequest");
       }
-      // verify the required parameter 'device' is set
-      if (device === undefined || device === null) {
-        throw new Error("Missing the required parameter 'device' when calling updateCustomOnboardRequest");
+      // verify the required parameter 'customOnboard' is set
+      if (customOnboard === undefined || customOnboard === null) {
+        throw new Error("Missing the required parameter 'customOnboard' when calling updateCustomOnboardRequest");
       }
 
       let pathParams = {

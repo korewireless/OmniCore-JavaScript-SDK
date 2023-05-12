@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import Bool from './Bool';
 
 /**
  * The EventNotificationConfig model module.
@@ -52,7 +51,7 @@ class EventNotificationConfig {
                 obj['pubsubTopicName'] = ApiClient.convertToType(data['pubsubTopicName'], 'String');
             }
             if (data.hasOwnProperty('isGcpPubSub')) {
-                obj['isGcpPubSub'] = ApiClient.convertToType(data['isGcpPubSub'], Bool);
+                obj['isGcpPubSub'] = ApiClient.convertToType(data['isGcpPubSub'], 'Boolean');
             }
             if (data.hasOwnProperty('subfolderMatches')) {
                 obj['subfolderMatches'] = ApiClient.convertToType(data['subfolderMatches'], 'String');
@@ -92,7 +91,7 @@ EventNotificationConfig.prototype['pubsubTopicName'] = undefined;
 
 /**
  * Describe whether the topic is Gcp pubsub topic or Omni topic
- * @member {module:model/Bool} isGcpPubSub
+ * @member {Boolean} isGcpPubSub
  */
 EventNotificationConfig.prototype['isGcpPubSub'] = undefined;
 

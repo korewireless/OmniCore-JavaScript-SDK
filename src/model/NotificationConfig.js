@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import Bool from './Bool';
 
 /**
  * The NotificationConfig model module.
@@ -52,7 +51,7 @@ class NotificationConfig {
                 obj['pubsubTopicName'] = ApiClient.convertToType(data['pubsubTopicName'], 'String');
             }
             if (data.hasOwnProperty('isGcpPubSub')) {
-                obj['isGcpPubSub'] = ApiClient.convertToType(data['isGcpPubSub'], Bool);
+                obj['isGcpPubSub'] = ApiClient.convertToType(data['isGcpPubSub'], 'Boolean');
             }
         }
         return obj;
@@ -85,7 +84,7 @@ NotificationConfig.prototype['pubsubTopicName'] = undefined;
 
 /**
  * Describe whether the topic is Gcp pubsub topic or Omni topic
- * @member {module:model/Bool} isGcpPubSub
+ * @member {Boolean} isGcpPubSub
  */
 NotificationConfig.prototype['isGcpPubSub'] = undefined;
 

@@ -378,7 +378,7 @@ Name | Type | Description  | Notes
 
 ## getDevice
 
-> Device getDevice(registryId, subscriptionId, deviceId)
+> Device getDevice(subscriptionId, registryId, deviceId)
 
 
 
@@ -399,10 +399,10 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new OmniCoreModelAndStateManagementApi.DeviceApi();
-let registryId = "registryId_example"; // String | Registry ID
 let subscriptionId = "subscriptionId_example"; // String | Subscription ID
+let registryId = "registryId_example"; // String | Registry ID
 let deviceId = "deviceId_example"; // String | Device ID
-apiInstance.getDevice(registryId, subscriptionId, deviceId, (error, data, response) => {
+apiInstance.getDevice(subscriptionId, registryId, deviceId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -416,8 +416,8 @@ apiInstance.getDevice(registryId, subscriptionId, deviceId, (error, data, respon
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **registryId** | **String**| Registry ID | 
  **subscriptionId** | **String**| Subscription ID | 
+ **registryId** | **String**| Registry ID | 
  **deviceId** | **String**| Device ID | 
 
 ### Return type
@@ -436,7 +436,7 @@ Name | Type | Description  | Notes
 
 ## getDevices
 
-> ListDevicesResponse getDevices(registryId, subscriptionId, opts)
+> ListDevicesResponse getDevices(subscriptionId, registryId, opts)
 
 
 
@@ -457,8 +457,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new OmniCoreModelAndStateManagementApi.DeviceApi();
-let registryId = "registryId_example"; // String | Registry ID
 let subscriptionId = "subscriptionId_example"; // String | Subscription ID
+let registryId = "registryId_example"; // String | Registry ID
 let opts = {
   'pageNumber': 56, // Number | Page Number
   'pageSize': 56, // Number | The maximum number of devices to return in the response. If this value is zero, the service will select a default size. 
@@ -469,7 +469,7 @@ let opts = {
   'gatewayListOptionsAssociationsGatewayId': "gatewayListOptionsAssociationsGatewayId_example", // String | If set, only devices associated with the specified gateway are returned. The gateway ID can be numeric (num_id) or the user-defined string (id). For example, if 123 is specified, only devices bound to the gateway with num_id 123 are returned
   'gatewayListOptionsGatewayType': "gatewayListOptionsGatewayType_example" // String | If GATEWAY is specified, only gateways are returned. If NON_GATEWAY is specified, only non-gateway devices are returned. If GATEWAY_TYPE_UNSPECIFIED is specified, all devices are returned.
 };
-apiInstance.getDevices(registryId, subscriptionId, opts, (error, data, response) => {
+apiInstance.getDevices(subscriptionId, registryId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -483,8 +483,8 @@ apiInstance.getDevices(registryId, subscriptionId, opts, (error, data, response)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **registryId** | **String**| Registry ID | 
  **subscriptionId** | **String**| Subscription ID | 
+ **registryId** | **String**| Registry ID | 
  **pageNumber** | **Number**| Page Number | [optional] 
  **pageSize** | **Number**| The maximum number of devices to return in the response. If this value is zero, the service will select a default size.  | [optional] 
  **fieldMask** | **String**| The fields of the Device resource to be returned to the response. The fields id and numId are always returned, along with any other fields specified. A comma-separated list of fully qualified names of fields. Example:  | [optional] 

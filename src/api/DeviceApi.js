@@ -386,21 +386,21 @@ export default class DeviceApi {
 
     /**
      * Get a device under a registry
-     * @param {String} registryId Registry ID
      * @param {String} subscriptionId Subscription ID
+     * @param {String} registryId Registry ID
      * @param {String} deviceId Device ID
      * @param {module:api/DeviceApi~getDeviceCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Device}
      */
-    getDevice(registryId, subscriptionId, deviceId, callback) {
+    getDevice(subscriptionId, registryId, deviceId, callback) {
       let postBody = null;
-      // verify the required parameter 'registryId' is set
-      if (registryId === undefined || registryId === null) {
-        throw new Error("Missing the required parameter 'registryId' when calling getDevice");
-      }
       // verify the required parameter 'subscriptionId' is set
       if (subscriptionId === undefined || subscriptionId === null) {
         throw new Error("Missing the required parameter 'subscriptionId' when calling getDevice");
+      }
+      // verify the required parameter 'registryId' is set
+      if (registryId === undefined || registryId === null) {
+        throw new Error("Missing the required parameter 'registryId' when calling getDevice");
       }
       // verify the required parameter 'deviceId' is set
       if (deviceId === undefined || deviceId === null) {
@@ -408,8 +408,8 @@ export default class DeviceApi {
       }
 
       let pathParams = {
-        'registryId': registryId,
         'subscriptionId': subscriptionId,
+        'registryId': registryId,
         'deviceId': deviceId
       };
       let queryParams = {
@@ -440,8 +440,8 @@ export default class DeviceApi {
 
     /**
      * Get all devices under a registry
-     * @param {String} registryId Registry ID
      * @param {String} subscriptionId Subscription ID
+     * @param {String} registryId Registry ID
      * @param {Object} opts Optional parameters
      * @param {Number} opts.pageNumber Page Number
      * @param {Number} opts.pageSize The maximum number of devices to return in the response. If this value is zero, the service will select a default size. 
@@ -454,21 +454,21 @@ export default class DeviceApi {
      * @param {module:api/DeviceApi~getDevicesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ListDevicesResponse}
      */
-    getDevices(registryId, subscriptionId, opts, callback) {
+    getDevices(subscriptionId, registryId, opts, callback) {
       opts = opts || {};
       let postBody = null;
-      // verify the required parameter 'registryId' is set
-      if (registryId === undefined || registryId === null) {
-        throw new Error("Missing the required parameter 'registryId' when calling getDevices");
-      }
       // verify the required parameter 'subscriptionId' is set
       if (subscriptionId === undefined || subscriptionId === null) {
         throw new Error("Missing the required parameter 'subscriptionId' when calling getDevices");
       }
+      // verify the required parameter 'registryId' is set
+      if (registryId === undefined || registryId === null) {
+        throw new Error("Missing the required parameter 'registryId' when calling getDevices");
+      }
 
       let pathParams = {
-        'registryId': registryId,
-        'subscriptionId': subscriptionId
+        'subscriptionId': subscriptionId,
+        'registryId': registryId
       };
       let queryParams = {
         'pageNumber': opts['pageNumber'],

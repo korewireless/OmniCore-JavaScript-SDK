@@ -82,9 +82,6 @@ class DeviceRegistry {
             if (data.hasOwnProperty('logLevel')) {
                 obj['logLevel'] = LogLevel.constructFromObject(data['logLevel']);
             }
-            if (data.hasOwnProperty('isNatsRoute')) {
-                obj['isNatsRoute'] = ApiClient.convertToType(data['isNatsRoute'], 'Boolean');
-            }
             if (data.hasOwnProperty('eventNotificationConfigs')) {
                 obj['eventNotificationConfigs'] = ApiClient.convertToType(data['eventNotificationConfigs'], [EventNotificationConfig]);
             }
@@ -235,11 +232,6 @@ DeviceRegistry.prototype['mqttConfig'] = undefined;
  * @member {module:model/LogLevel} logLevel
  */
 DeviceRegistry.prototype['logLevel'] = undefined;
-
-/**
- * @member {Boolean} isNatsRoute
- */
-DeviceRegistry.prototype['isNatsRoute'] = undefined;
 
 /**
  * @member {Array.<module:model/EventNotificationConfig>} eventNotificationConfigs

@@ -13,7 +13,6 @@ Name | Type | Description | Notes
 **httpConfig** | [**HttpConfig**](HttpConfig.md) |  | [optional] 
 **mqttConfig** | [**MqttConfig**](MqttConfig.md) |  | [optional] 
 **logLevel** | [**LogLevel**](LogLevel.md) |  | [optional] 
-**isNatsRoute** | **Boolean** |  | [optional] 
 **eventNotificationConfigs** | [**[EventNotificationConfig]**](EventNotificationConfig.md) |  | [optional] 
 **logNotificationConfig** | [**NotificationConfig**](NotificationConfig.md) |  | [optional] 
 **stateNotificationConfig** | [**NotificationConfig**](NotificationConfig.md) |  | [optional] 

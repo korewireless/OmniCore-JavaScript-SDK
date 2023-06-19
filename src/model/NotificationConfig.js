@@ -50,6 +50,9 @@ class NotificationConfig {
             if (data.hasOwnProperty('pubsubTopicName')) {
                 obj['pubsubTopicName'] = ApiClient.convertToType(data['pubsubTopicName'], 'String');
             }
+            if (data.hasOwnProperty('isGcpPubSub')) {
+                obj['isGcpPubSub'] = ApiClient.convertToType(data['isGcpPubSub'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -78,6 +81,12 @@ class NotificationConfig {
  * @member {String} pubsubTopicName
  */
 NotificationConfig.prototype['pubsubTopicName'] = undefined;
+
+/**
+ * Describe whether the topic is Gcp pubsub topic or Omni topic
+ * @member {Boolean} isGcpPubSub
+ */
+NotificationConfig.prototype['isGcpPubSub'] = undefined;
 
 
 

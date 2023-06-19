@@ -50,6 +50,9 @@ class EventNotificationConfig {
             if (data.hasOwnProperty('pubsubTopicName')) {
                 obj['pubsubTopicName'] = ApiClient.convertToType(data['pubsubTopicName'], 'String');
             }
+            if (data.hasOwnProperty('isGcpPubSub')) {
+                obj['isGcpPubSub'] = ApiClient.convertToType(data['isGcpPubSub'], 'Boolean');
+            }
             if (data.hasOwnProperty('subfolderMatches')) {
                 obj['subfolderMatches'] = ApiClient.convertToType(data['subfolderMatches'], 'String');
             }
@@ -85,6 +88,12 @@ class EventNotificationConfig {
  * @member {String} pubsubTopicName
  */
 EventNotificationConfig.prototype['pubsubTopicName'] = undefined;
+
+/**
+ * Describe whether the topic is Gcp pubsub topic or Omni topic
+ * @member {Boolean} isGcpPubSub
+ */
+EventNotificationConfig.prototype['isGcpPubSub'] = undefined;
 
 /**
  * SubfolderMatches: If the subfolder name matches this string exactly, this configuration will be used. The string must not include the leading '/' character. If empty, all strings are matched. This field is used only for telemetry events; subfolders are not supported for state changes.

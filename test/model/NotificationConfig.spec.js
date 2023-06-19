@@ -60,12 +60,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property isGcpPubSub (base name: "isGcpPubSub")', function() {
-      // uncomment below and update the code to test the property isGcpPubSub
-      //var instance = new OmniCoreModelAndStateManagementApi.NotificationConfig();
-      //expect(instance).to.be();
-    });
-
   });
 
 }));

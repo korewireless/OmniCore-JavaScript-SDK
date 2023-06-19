@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new OmniCoreModelAndStateManagementApi.EventNotificationConfig();
+    instance = new OmniCoreModelAndStateManagementApi.SinkApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,25 +47,47 @@
       object[property] = value;
   }
 
-  describe('EventNotificationConfig', function() {
-    it('should create an instance of EventNotificationConfig', function() {
-      // uncomment below and update the code to test EventNotificationConfig
-      //var instance = new OmniCoreModelAndStateManagementApi.EventNotificationConfig();
-      //expect(instance).to.be.a(OmniCoreModelAndStateManagementApi.EventNotificationConfig);
+  describe('SinkApi', function() {
+    describe('createSink', function() {
+      it('should call createSink successfully', function(done) {
+        //uncomment below and update the code to test createSink
+        //instance.createSink(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
     });
-
-    it('should have the property pubsubTopicName (base name: "pubsubTopicName")', function() {
-      // uncomment below and update the code to test the property pubsubTopicName
-      //var instance = new OmniCoreModelAndStateManagementApi.EventNotificationConfig();
-      //expect(instance).to.be();
+    describe('deleteSink', function() {
+      it('should call deleteSink successfully', function(done) {
+        //uncomment below and update the code to test deleteSink
+        //instance.deleteSink(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
     });
-
-    it('should have the property subfolderMatches (base name: "subfolderMatches")', function() {
-      // uncomment below and update the code to test the property subfolderMatches
-      //var instance = new OmniCoreModelAndStateManagementApi.EventNotificationConfig();
-      //expect(instance).to.be();
+    describe('getASink', function() {
+      it('should call getASink successfully', function(done) {
+        //uncomment below and update the code to test getASink
+        //instance.getASink(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
     });
-
+    describe('getSinks', function() {
+      it('should call getSinks successfully', function(done) {
+        //uncomment below and update the code to test getSinks
+        //instance.getSinks(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

@@ -268,7 +268,7 @@ export default class DeviceApi {
      * Callback function to receive the result of the deleteDevice operation.
      * @callback module:api/DeviceApi~deleteDeviceCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Info} data The data returned by the service call.
+     * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -278,7 +278,7 @@ export default class DeviceApi {
      * @param {String} registryId Registry ID
      * @param {String} deviceId Device ID
      * @param {module:api/DeviceApi~deleteDeviceCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Info}
+     * data is of type: {@link Object}
      */
     deleteDevice(subscriptionId, registryId, deviceId, callback) {
       let postBody = null;
@@ -310,7 +310,7 @@ export default class DeviceApi {
       let authNames = ['apiKey', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Info;
+      let returnType = Object;
       return this.apiClient.callApi(
         '/subscriptions/{subscriptionId}/registries/{registryId}/devices/{deviceId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,

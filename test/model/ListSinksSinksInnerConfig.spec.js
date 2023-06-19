@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new OmniCoreModelAndStateManagementApi.EventNotificationConfig();
+    instance = new OmniCoreModelAndStateManagementApi.ListSinksSinksInnerConfig();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,16 @@
       object[property] = value;
   }
 
-  describe('EventNotificationConfig', function() {
-    it('should create an instance of EventNotificationConfig', function() {
-      // uncomment below and update the code to test EventNotificationConfig
-      //var instance = new OmniCoreModelAndStateManagementApi.EventNotificationConfig();
-      //expect(instance).to.be.a(OmniCoreModelAndStateManagementApi.EventNotificationConfig);
+  describe('ListSinksSinksInnerConfig', function() {
+    it('should create an instance of ListSinksSinksInnerConfig', function() {
+      // uncomment below and update the code to test ListSinksSinksInnerConfig
+      //var instance = new OmniCoreModelAndStateManagementApi.ListSinksSinksInnerConfig();
+      //expect(instance).to.be.a(OmniCoreModelAndStateManagementApi.ListSinksSinksInnerConfig);
     });
 
-    it('should have the property pubsubTopicName (base name: "pubsubTopicName")', function() {
-      // uncomment below and update the code to test the property pubsubTopicName
-      //var instance = new OmniCoreModelAndStateManagementApi.EventNotificationConfig();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property subfolderMatches (base name: "subfolderMatches")', function() {
-      // uncomment below and update the code to test the property subfolderMatches
-      //var instance = new OmniCoreModelAndStateManagementApi.EventNotificationConfig();
+    it('should have the property connectionParameter (base name: "connectionParameter")', function() {
+      // uncomment below and update the code to test the property connectionParameter
+      //var instance = new OmniCoreModelAndStateManagementApi.ListSinksSinksInnerConfig();
       //expect(instance).to.be();
     });
 

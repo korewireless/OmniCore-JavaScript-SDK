@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new OmniCoreModelAndStateManagementApi.EventNotificationConfig();
+    instance = new OmniCoreModelAndStateManagementApi.MetricsApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,25 +47,17 @@
       object[property] = value;
   }
 
-  describe('EventNotificationConfig', function() {
-    it('should create an instance of EventNotificationConfig', function() {
-      // uncomment below and update the code to test EventNotificationConfig
-      //var instance = new OmniCoreModelAndStateManagementApi.EventNotificationConfig();
-      //expect(instance).to.be.a(OmniCoreModelAndStateManagementApi.EventNotificationConfig);
+  describe('MetricsApi', function() {
+    describe('getMetrics', function() {
+      it('should call getMetrics successfully', function(done) {
+        //uncomment below and update the code to test getMetrics
+        //instance.getMetrics(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
     });
-
-    it('should have the property pubsubTopicName (base name: "pubsubTopicName")', function() {
-      // uncomment below and update the code to test the property pubsubTopicName
-      //var instance = new OmniCoreModelAndStateManagementApi.EventNotificationConfig();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property subfolderMatches (base name: "subfolderMatches")', function() {
-      // uncomment below and update the code to test the property subfolderMatches
-      //var instance = new OmniCoreModelAndStateManagementApi.EventNotificationConfig();
-      //expect(instance).to.be();
-    });
-
   });
 
 }));

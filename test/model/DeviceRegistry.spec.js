@@ -108,6 +108,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property isNatsRoute (base name: "isNatsRoute")', function() {
+      // uncomment below and update the code to test the property isNatsRoute
+      //var instance = new OmniCoreModelAndStateManagementApi.DeviceRegistry();
+      //expect(instance).to.be();
+    });
+
     it('should have the property eventNotificationConfigs (base name: "eventNotificationConfigs")', function() {
       // uncomment below and update the code to test the property eventNotificationConfigs
       //var instance = new OmniCoreModelAndStateManagementApi.DeviceRegistry();

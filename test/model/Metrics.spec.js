@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new OmniCoreModelAndStateManagementApi.EventNotificationConfig();
+    instance = new OmniCoreModelAndStateManagementApi.Metrics();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,16 @@
       object[property] = value;
   }
 
-  describe('EventNotificationConfig', function() {
-    it('should create an instance of EventNotificationConfig', function() {
-      // uncomment below and update the code to test EventNotificationConfig
-      //var instance = new OmniCoreModelAndStateManagementApi.EventNotificationConfig();
-      //expect(instance).to.be.a(OmniCoreModelAndStateManagementApi.EventNotificationConfig);
+  describe('Metrics', function() {
+    it('should create an instance of Metrics', function() {
+      // uncomment below and update the code to test Metrics
+      //var instance = new OmniCoreModelAndStateManagementApi.Metrics();
+      //expect(instance).to.be.a(OmniCoreModelAndStateManagementApi.Metrics);
     });
 
-    it('should have the property pubsubTopicName (base name: "pubsubTopicName")', function() {
-      // uncomment below and update the code to test the property pubsubTopicName
-      //var instance = new OmniCoreModelAndStateManagementApi.EventNotificationConfig();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property subfolderMatches (base name: "subfolderMatches")', function() {
-      // uncomment below and update the code to test the property subfolderMatches
-      //var instance = new OmniCoreModelAndStateManagementApi.EventNotificationConfig();
+    it('should have the property details (base name: "details")', function() {
+      // uncomment below and update the code to test the property details
+      //var instance = new OmniCoreModelAndStateManagementApi.Metrics();
       //expect(instance).to.be();
     });
 

@@ -147,12 +147,17 @@ Class | Method | HTTP request | Description
 *OmniCoreModelAndStateManagementApi.DeviceApi* | [**updateConfigurationToDevice**](docs/DeviceApi.md#updateConfigurationToDevice) | **POST** /subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/updateConfigurationToDevice | 
 *OmniCoreModelAndStateManagementApi.DeviceApi* | [**updateCustomOnboardRequest**](docs/DeviceApi.md#updateCustomOnboardRequest) | **POST** /subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/updateCustomOnboardRequest | 
 *OmniCoreModelAndStateManagementApi.DeviceApi* | [**updateDevice**](docs/DeviceApi.md#updateDevice) | **PATCH** /subscriptions/{subscriptionId}/registries/{registryId}/devices/{deviceId} | 
+*OmniCoreModelAndStateManagementApi.MetricsApi* | [**getMetrics**](docs/MetricsApi.md#getMetrics) | **GET** /subscriptions/{subscriptionId}/metrics | 
 *OmniCoreModelAndStateManagementApi.RegistryApi* | [**createRegistry**](docs/RegistryApi.md#createRegistry) | **POST** /subscriptions/{subscriptionId}/registries | 
 *OmniCoreModelAndStateManagementApi.RegistryApi* | [**deleteRegistry**](docs/RegistryApi.md#deleteRegistry) | **DELETE** /subscriptions/{subscriptionId}/registries/{registryId} | 
 *OmniCoreModelAndStateManagementApi.RegistryApi* | [**getRegistries**](docs/RegistryApi.md#getRegistries) | **GET** /subscriptions/{subscriptionId}/registries | 
 *OmniCoreModelAndStateManagementApi.RegistryApi* | [**getRegistry**](docs/RegistryApi.md#getRegistry) | **GET** /subscriptions/{subscriptionId}/registries/{registryId} | 
 *OmniCoreModelAndStateManagementApi.RegistryApi* | [**sendBroadcastToDevices**](docs/RegistryApi.md#sendBroadcastToDevices) | **POST** /subscriptions/{subscriptionid}/registries/{registryId}/sendBroadcastToDevice | 
 *OmniCoreModelAndStateManagementApi.RegistryApi* | [**updateRegistry**](docs/RegistryApi.md#updateRegistry) | **PATCH** /subscriptions/{subscriptionId}/registries/{registryId} | 
+*OmniCoreModelAndStateManagementApi.SinkApi* | [**createSink**](docs/SinkApi.md#createSink) | **POST** /subscriptions/{subscriptionId}/sinks | 
+*OmniCoreModelAndStateManagementApi.SinkApi* | [**deleteSink**](docs/SinkApi.md#deleteSink) | **DELETE** /subscriptions/{subscriptionId}/sinks/{sinkId} | 
+*OmniCoreModelAndStateManagementApi.SinkApi* | [**getASink**](docs/SinkApi.md#getASink) | **GET** /subscriptions/{subscriptionId}/sinks/{sinkId} | 
+*OmniCoreModelAndStateManagementApi.SinkApi* | [**getSinks**](docs/SinkApi.md#getSinks) | **GET** /subscriptions/{subscriptionId}/sinks | Get All Sinks
 
 
 ## Documentation for Models
@@ -179,13 +184,19 @@ Class | Method | HTTP request | Description
  - [OmniCoreModelAndStateManagementApi.ListDeviceRegistries](docs/ListDeviceRegistries.md)
  - [OmniCoreModelAndStateManagementApi.ListDeviceStatesResponse](docs/ListDeviceStatesResponse.md)
  - [OmniCoreModelAndStateManagementApi.ListDevicesResponse](docs/ListDevicesResponse.md)
+ - [OmniCoreModelAndStateManagementApi.ListSinks](docs/ListSinks.md)
+ - [OmniCoreModelAndStateManagementApi.ListSinksSinksInner](docs/ListSinksSinksInner.md)
+ - [OmniCoreModelAndStateManagementApi.ListSinksSinksInnerConfig](docs/ListSinksSinksInnerConfig.md)
  - [OmniCoreModelAndStateManagementApi.LogLevel](docs/LogLevel.md)
+ - [OmniCoreModelAndStateManagementApi.Metrics](docs/Metrics.md)
+ - [OmniCoreModelAndStateManagementApi.MetricsDetails](docs/MetricsDetails.md)
  - [OmniCoreModelAndStateManagementApi.MqttConfig](docs/MqttConfig.md)
  - [OmniCoreModelAndStateManagementApi.NotificationConfig](docs/NotificationConfig.md)
  - [OmniCoreModelAndStateManagementApi.Policy](docs/Policy.md)
  - [OmniCoreModelAndStateManagementApi.PublicKeyCertificate](docs/PublicKeyCertificate.md)
  - [OmniCoreModelAndStateManagementApi.PublicKeyCredential](docs/PublicKeyCredential.md)
  - [OmniCoreModelAndStateManagementApi.RegistryCredential](docs/RegistryCredential.md)
+ - [OmniCoreModelAndStateManagementApi.Sink](docs/Sink.md)
  - [OmniCoreModelAndStateManagementApi.X509CertificateDetails](docs/X509CertificateDetails.md)
 
 

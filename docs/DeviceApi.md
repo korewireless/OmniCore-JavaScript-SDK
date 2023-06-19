@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 
 ## deleteDevice
 
-> Info deleteDevice(subscriptionId, registryId, deviceId)
+> Object deleteDevice(subscriptionId, registryId, deviceId)
 
 
 
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Info**](Info.md)
+**Object**
 
 ### Authorization
 

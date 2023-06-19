@@ -35,16 +35,24 @@ import ListDeviceConfigVersionsResponse from './model/ListDeviceConfigVersionsRe
 import ListDeviceRegistries from './model/ListDeviceRegistries';
 import ListDeviceStatesResponse from './model/ListDeviceStatesResponse';
 import ListDevicesResponse from './model/ListDevicesResponse';
+import ListSinks from './model/ListSinks';
+import ListSinksSinksInner from './model/ListSinksSinksInner';
+import ListSinksSinksInnerConfig from './model/ListSinksSinksInnerConfig';
 import LogLevel from './model/LogLevel';
+import Metrics from './model/Metrics';
+import MetricsDetails from './model/MetricsDetails';
 import MqttConfig from './model/MqttConfig';
 import NotificationConfig from './model/NotificationConfig';
 import Policy from './model/Policy';
 import PublicKeyCertificate from './model/PublicKeyCertificate';
 import PublicKeyCredential from './model/PublicKeyCredential';
 import RegistryCredential from './model/RegistryCredential';
+import Sink from './model/Sink';
 import X509CertificateDetails from './model/X509CertificateDetails';
 import DeviceApi from './api/DeviceApi';
+import MetricsApi from './api/MetricsApi';
 import RegistryApi from './api/RegistryApi';
+import SinkApi from './api/SinkApi';
 
 
 /**
@@ -218,10 +226,40 @@ export {
     ListDevicesResponse,
 
     /**
+     * The ListSinks model constructor.
+     * @property {module:model/ListSinks}
+     */
+    ListSinks,
+
+    /**
+     * The ListSinksSinksInner model constructor.
+     * @property {module:model/ListSinksSinksInner}
+     */
+    ListSinksSinksInner,
+
+    /**
+     * The ListSinksSinksInnerConfig model constructor.
+     * @property {module:model/ListSinksSinksInnerConfig}
+     */
+    ListSinksSinksInnerConfig,
+
+    /**
      * The LogLevel model constructor.
      * @property {module:model/LogLevel}
      */
     LogLevel,
+
+    /**
+     * The Metrics model constructor.
+     * @property {module:model/Metrics}
+     */
+    Metrics,
+
+    /**
+     * The MetricsDetails model constructor.
+     * @property {module:model/MetricsDetails}
+     */
+    MetricsDetails,
 
     /**
      * The MqttConfig model constructor.
@@ -260,6 +298,12 @@ export {
     RegistryCredential,
 
     /**
+     * The Sink model constructor.
+     * @property {module:model/Sink}
+     */
+    Sink,
+
+    /**
      * The X509CertificateDetails model constructor.
      * @property {module:model/X509CertificateDetails}
      */
@@ -272,8 +316,20 @@ export {
     DeviceApi,
 
     /**
+    * The MetricsApi service constructor.
+    * @property {module:api/MetricsApi}
+    */
+    MetricsApi,
+
+    /**
     * The RegistryApi service constructor.
     * @property {module:api/RegistryApi}
     */
-    RegistryApi
+    RegistryApi,
+
+    /**
+    * The SinkApi service constructor.
+    * @property {module:api/SinkApi}
+    */
+    SinkApi
 };

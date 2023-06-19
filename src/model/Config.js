@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The Info model module.
- * @module model/Info
+ * The Config model module.
+ * @module model/Config
  * @version 1.8.1
  */
-class Info {
+class Config {
     /**
-     * Constructs a new <code>Info</code>.
-     * @alias module:model/Info
+     * Constructs a new <code>Config</code>.
+     * @alias module:model/Config
      */
     constructor() { 
         
-        Info.initialize(this);
+        Config.initialize(this);
     }
 
     /**
@@ -37,32 +37,32 @@ class Info {
     }
 
     /**
-     * Constructs a <code>Info</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>Config</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/Info} obj Optional instance to populate.
-     * @return {module:model/Info} The populated <code>Info</code> instance.
+     * @param {module:model/Config} obj Optional instance to populate.
+     * @return {module:model/Config} The populated <code>Config</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new Info();
+            obj = obj || new Config();
 
-            if (data.hasOwnProperty('info')) {
-                obj['info'] = ApiClient.convertToType(data['info'], 'String');
+            if (data.hasOwnProperty('connectionParameter')) {
+                obj['connectionParameter'] = ApiClient.convertToType(data['connectionParameter'], 'String');
             }
         }
         return obj;
     }
 
     /**
-     * Validates the JSON data with respect to <code>Info</code>.
+     * Validates the JSON data with respect to <code>Config</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Info</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Config</code>.
      */
     static validateJSON(data) {
         // ensure the json data is a string
-        if (data['info'] && !(typeof data['info'] === 'string' || data['info'] instanceof String)) {
-            throw new Error("Expected the field `info` to be a primitive type in the JSON string but got " + data['info']);
+        if (data['connectionParameter'] && !(typeof data['connectionParameter'] === 'string' || data['connectionParameter'] instanceof String)) {
+            throw new Error("Expected the field `connectionParameter` to be a primitive type in the JSON string but got " + data['connectionParameter']);
         }
 
         return true;
@@ -74,14 +74,14 @@ class Info {
 
 
 /**
- * @member {String} info
+ * @member {String} connectionParameter
  */
-Info.prototype['info'] = undefined;
+Config.prototype['connectionParameter'] = undefined;
 
 
 
 
 
 
-export default Info;
+export default Config;
 

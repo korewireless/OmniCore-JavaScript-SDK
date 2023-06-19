@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new OmniCoreModelAndStateManagementApi.ListSinks();
+    instance = new OmniCoreModelAndStateManagementApi.Config();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,16 @@
       object[property] = value;
   }
 
-  describe('ListSinks', function() {
-    it('should create an instance of ListSinks', function() {
-      // uncomment below and update the code to test ListSinks
-      //var instance = new OmniCoreModelAndStateManagementApi.ListSinks();
-      //expect(instance).to.be.a(OmniCoreModelAndStateManagementApi.ListSinks);
+  describe('Config', function() {
+    it('should create an instance of Config', function() {
+      // uncomment below and update the code to test Config
+      //var instance = new OmniCoreModelAndStateManagementApi.Config();
+      //expect(instance).to.be.a(OmniCoreModelAndStateManagementApi.Config);
     });
 
-    it('should have the property sinks (base name: "sinks")', function() {
-      // uncomment below and update the code to test the property sinks
-      //var instance = new OmniCoreModelAndStateManagementApi.ListSinks();
+    it('should have the property connectionParameter (base name: "connectionParameter")', function() {
+      // uncomment below and update the code to test the property connectionParameter
+      //var instance = new OmniCoreModelAndStateManagementApi.Config();
       //expect(instance).to.be();
     });
 

@@ -1,9 +1,9 @@
-# OmniCoreModelAndStateManagementApi.ListSinks
+# OmniCoreModelAndStateManagementApi.Config
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sinks** | [**[Sink]**](Sink.md) |  | [optional] 
+**connectionParameter** | **String** |  | [optional] 
 
 

@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**details** | [**[Configuration]**](Configuration.md) |  | [optional] 
+**details** | [**[VaultConfiguration]**](VaultConfiguration.md) |  | [optional] 
 
 

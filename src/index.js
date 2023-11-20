@@ -19,7 +19,6 @@ import BindRequest from './model/BindRequest';
 import BindRequestIdsGateway from './model/BindRequestIdsGateway';
 import BlockCommunicationBody from './model/BlockCommunicationBody';
 import Config from './model/Config';
-import Configuration from './model/Configuration';
 import Configurations from './model/Configurations';
 import CreateConfiguration from './model/CreateConfiguration';
 import CustomOnboard from './model/CustomOnboard';
@@ -70,6 +69,7 @@ import Replay from './model/Replay';
 import ReplayBody from './model/ReplayBody';
 import Sink from './model/Sink';
 import StartExportBody from './model/StartExportBody';
+import VaultConfiguration from './model/VaultConfiguration';
 import VaultStatus from './model/VaultStatus';
 import VaultStatusDetails from './model/VaultStatusDetails';
 import X509CertificateDetails from './model/X509CertificateDetails';
@@ -153,12 +153,6 @@ export {
      * @property {module:model/Config}
      */
     Config,
-
-    /**
-     * The Configuration model constructor.
-     * @property {module:model/Configuration}
-     */
-    Configuration,
 
     /**
      * The Configurations model constructor.
@@ -459,6 +453,12 @@ export {
      * @property {module:model/StartExportBody}
      */
     StartExportBody,
+
+    /**
+     * The VaultConfiguration model constructor.
+     * @property {module:model/VaultConfiguration}
+     */
+    VaultConfiguration,
 
     /**
      * The VaultStatus model constructor.

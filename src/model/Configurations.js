@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import Configuration from './Configuration';
+import VaultConfiguration from './VaultConfiguration';
 
 /**
  * The Configurations model module.
@@ -49,7 +49,7 @@ class Configurations {
             obj = obj || new Configurations();
 
             if (data.hasOwnProperty('Details')) {
-                obj['Details'] = ApiClient.convertToType(data['Details'], [Configuration]);
+                obj['Details'] = ApiClient.convertToType(data['Details'], [VaultConfiguration]);
             }
         }
         return obj;
@@ -68,7 +68,7 @@ class Configurations {
             }
             // validate the optional field `Details` (array)
             for (const item of data['Details']) {
-                Configuration.validateJsonObject(item);
+                VaultConfiguration.validateJsonObject(item);
             };
         }
 
@@ -81,7 +81,7 @@ class Configurations {
 
 
 /**
- * @member {Array.<module:model/Configuration>} Details
+ * @member {Array.<module:model/VaultConfiguration>} Details
  */
 Configurations.prototype['Details'] = undefined;
 

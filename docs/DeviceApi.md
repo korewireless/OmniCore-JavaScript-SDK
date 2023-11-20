@@ -1,24 +1,24 @@
 # OmniCoreModelAndStateManagementApi.DeviceApi
 
-All URIs are relative to *https://api.korewireless.com/omnicore*
+All URIs are relative to *https://api.korewireless.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**bindDevice**](DeviceApi.md#bindDevice) | **POST** /subscriptions/{subscriptionId}/registries/{registryId}/bindDeviceToGateway | 
-[**bindDevices**](DeviceApi.md#bindDevices) | **POST** /subscriptions/{subscriptionId}/registries/{registryId}/bindDevicesToGateway | 
-[**blockDeviceCommuncation**](DeviceApi.md#blockDeviceCommuncation) | **PUT** /subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/communication | 
-[**createDevice**](DeviceApi.md#createDevice) | **POST** /subscriptions/{subscriptionId}/registries/{registryId}/devices | 
-[**deleteDevice**](DeviceApi.md#deleteDevice) | **DELETE** /subscriptions/{subscriptionId}/registries/{registryId}/devices/{deviceId} | 
-[**getConfig**](DeviceApi.md#getConfig) | **GET** /subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/configVersions | 
-[**getDevice**](DeviceApi.md#getDevice) | **GET** /subscriptions/{subscriptionId}/registries/{registryId}/devices/{deviceId} | 
-[**getDevices**](DeviceApi.md#getDevices) | **GET** /subscriptions/{subscriptionId}/registries/{registryId}/devices | 
-[**getStates**](DeviceApi.md#getStates) | **GET** /subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/states | 
-[**sendCommandToDevice**](DeviceApi.md#sendCommandToDevice) | **POST** /subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/sendCommandToDevice | 
-[**unBindDevice**](DeviceApi.md#unBindDevice) | **POST** /subscriptions/{subscriptionId}/registries/{registryId}/unbindDeviceFromGateway | 
-[**unBindDevices**](DeviceApi.md#unBindDevices) | **POST** /subscriptions/{subscriptionId}/registries/{registryId}/unbindDevicesFromGateway | 
-[**updateConfigurationToDevice**](DeviceApi.md#updateConfigurationToDevice) | **POST** /subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/updateConfigurationToDevice | 
-[**updateCustomOnboardRequest**](DeviceApi.md#updateCustomOnboardRequest) | **POST** /subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/updateCustomOnboardRequest | 
-[**updateDevice**](DeviceApi.md#updateDevice) | **PATCH** /subscriptions/{subscriptionId}/registries/{registryId}/devices/{deviceId} | 
+[**bindDevice**](DeviceApi.md#bindDevice) | **POST** /omnicore/subscriptions/{subscriptionId}/registries/{registryId}/bindDeviceToGateway | 
+[**bindDevices**](DeviceApi.md#bindDevices) | **POST** /omnicore/subscriptions/{subscriptionId}/registries/{registryId}/bindDevicesToGateway | 
+[**blockDeviceCommuncation**](DeviceApi.md#blockDeviceCommuncation) | **PUT** /omnicore/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/communication | 
+[**createDevice**](DeviceApi.md#createDevice) | **POST** /omnicore/subscriptions/{subscriptionId}/registries/{registryId}/devices | 
+[**deleteDevice**](DeviceApi.md#deleteDevice) | **DELETE** /omnicore/subscriptions/{subscriptionId}/registries/{registryId}/devices/{deviceId} | 
+[**getConfig**](DeviceApi.md#getConfig) | **GET** /omnicore/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/configVersions | 
+[**getDevice**](DeviceApi.md#getDevice) | **GET** /omnicore/subscriptions/{subscriptionId}/registries/{registryId}/devices/{deviceId} | 
+[**getDevices**](DeviceApi.md#getDevices) | **GET** /omnicore/subscriptions/{subscriptionId}/registries/{registryId}/devices | 
+[**getStates**](DeviceApi.md#getStates) | **GET** /omnicore/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/states | 
+[**sendCommandToDevice**](DeviceApi.md#sendCommandToDevice) | **POST** /omnicore/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/sendCommandToDevice | 
+[**unBindDevice**](DeviceApi.md#unBindDevice) | **POST** /omnicore/subscriptions/{subscriptionId}/registries/{registryId}/unbindDeviceFromGateway | 
+[**unBindDevices**](DeviceApi.md#unBindDevices) | **POST** /omnicore/subscriptions/{subscriptionId}/registries/{registryId}/unbindDevicesFromGateway | 
+[**updateConfigurationToDevice**](DeviceApi.md#updateConfigurationToDevice) | **POST** /omnicore/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/updateConfigurationToDevice | 
+[**updateCustomOnboardRequest**](DeviceApi.md#updateCustomOnboardRequest) | **POST** /omnicore/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/updateCustomOnboardRequest | 
+[**updateDevice**](DeviceApi.md#updateDevice) | **PATCH** /omnicore/subscriptions/{subscriptionId}/registries/{registryId}/devices/{deviceId} | 
 
 
 

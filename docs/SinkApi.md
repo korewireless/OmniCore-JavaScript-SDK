@@ -1,13 +1,13 @@
 # OmniCoreModelAndStateManagementApi.SinkApi
 
-All URIs are relative to *https://api.korewireless.com/omnicore*
+All URIs are relative to *https://api.korewireless.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createSink**](SinkApi.md#createSink) | **POST** /subscriptions/{subscriptionId}/sinks | 
-[**deleteSink**](SinkApi.md#deleteSink) | **DELETE** /subscriptions/{subscriptionId}/sinks/{sinkId} | 
-[**getASink**](SinkApi.md#getASink) | **GET** /subscriptions/{subscriptionId}/sinks/{sinkId} | 
-[**getSinks**](SinkApi.md#getSinks) | **GET** /subscriptions/{subscriptionId}/sinks | Get All Sinks
+[**createSink**](SinkApi.md#createSink) | **POST** /omnicore/subscriptions/{subscriptionId}/sinks | 
+[**deleteSink**](SinkApi.md#deleteSink) | **DELETE** /omnicore/subscriptions/{subscriptionId}/sinks/{sinkId} | 
+[**getASink**](SinkApi.md#getASink) | **GET** /omnicore/subscriptions/{subscriptionId}/sinks/{sinkId} | 
+[**getSinks**](SinkApi.md#getSinks) | **GET** /omnicore/subscriptions/{subscriptionId}/sinks | Get All Sinks
 
 
 

@@ -3,8 +3,8 @@
 OmniCoreModelAndStateManagementApi - JavaScript client for omni_core_model_and_state_management_api
 This is an OmniCore Model and State Management server.
 
-- API version: 1.8.3
-- Package version: 1.8.3
+- API version: 1.8.4
+- Package version: 1.8.4
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen
 For more information, please visit [http://www.korewireless.com](http://www.korewireless.com)
 
@@ -158,14 +158,16 @@ Class | Method | HTTP request | Description
 *OmniCoreModelAndStateManagementApi.SinkApi* | [**getASink**](docs/SinkApi.md#getASink) | **GET** /omnicore/subscriptions/{subscriptionId}/sinks/{sinkId} | 
 *OmniCoreModelAndStateManagementApi.SinkApi* | [**getSinks**](docs/SinkApi.md#getSinks) | **GET** /omnicore/subscriptions/{subscriptionId}/sinks | Get All Sinks
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**createVaultConfiguration**](docs/VaultApi.md#createVaultConfiguration) | **POST** /vault/subscriptions/{subscriptionid}/configurations | 
+*OmniCoreModelAndStateManagementApi.VaultApi* | [**createVaultKey**](docs/VaultApi.md#createVaultKey) | **POST** /vault/subscriptions/{subscriptionid}/encryptionkeys | 
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**deleteConfiguration**](docs/VaultApi.md#deleteConfiguration) | **DELETE** /vault/subscriptions/{subscriptionid}/configurations/{configid} | 
-*OmniCoreModelAndStateManagementApi.VaultApi* | [**enableVault**](docs/VaultApi.md#enableVault) | **POST** /vault/subscriptions/{subscriptionid}/enable-vault | 
+*OmniCoreModelAndStateManagementApi.VaultApi* | [**deleteVaultKey**](docs/VaultApi.md#deleteVaultKey) | **DELETE** /vault/subscriptions/{subscriptionid}/encryptionkeys/{keyid} | 
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**getExports**](docs/VaultApi.md#getExports) | **GET** /vault/subscriptions/{subscriptionid}/exports | 
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**getRegistryData**](docs/VaultApi.md#getRegistryData) | **GET** /vault/subscriptions/{subscriptionid}/folders | 
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**getReplays**](docs/VaultApi.md#getReplays) | **GET** /vault/subscriptions/{subscriptionid}/replays | 
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**getVaultAudit**](docs/VaultApi.md#getVaultAudit) | **GET** /vault/subscriptions/{subscriptionid}/audit | 
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**getVaultConfigurations**](docs/VaultApi.md#getVaultConfigurations) | **GET** /vault/subscriptions/{subscriptionid}/configurations | 
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**getVaultFiles**](docs/VaultApi.md#getVaultFiles) | **GET** /vault/subscriptions/{subscriptionid}/registry/{registryid}/files | 
+*OmniCoreModelAndStateManagementApi.VaultApi* | [**getVaultKeys**](docs/VaultApi.md#getVaultKeys) | **GET** /vault/subscriptions/{subscriptionid}/encryptionkeys | 
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**getVaultMetrics**](docs/VaultApi.md#getVaultMetrics) | **GET** /vault/subscriptions/{subscriptionid}/metrics | 
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**getVaultStatus**](docs/VaultApi.md#getVaultStatus) | **GET** /vault/subscriptions/{subscriptionid}/status | 
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**startExport**](docs/VaultApi.md#startExport) | **POST** /vault/subscriptions/{subscriptionid}/exports | 
@@ -182,8 +184,8 @@ Class | Method | HTTP request | Description
  - [OmniCoreModelAndStateManagementApi.Config](docs/Config.md)
  - [OmniCoreModelAndStateManagementApi.Configurations](docs/Configurations.md)
  - [OmniCoreModelAndStateManagementApi.CreateConfiguration](docs/CreateConfiguration.md)
+ - [OmniCoreModelAndStateManagementApi.CreateVaultKeyBody](docs/CreateVaultKeyBody.md)
  - [OmniCoreModelAndStateManagementApi.CustomOnboard](docs/CustomOnboard.md)
- - [OmniCoreModelAndStateManagementApi.Details](docs/Details.md)
  - [OmniCoreModelAndStateManagementApi.Device](docs/Device.md)
  - [OmniCoreModelAndStateManagementApi.DeviceCommand](docs/DeviceCommand.md)
  - [OmniCoreModelAndStateManagementApi.DeviceConfig](docs/DeviceConfig.md)
@@ -191,7 +193,6 @@ Class | Method | HTTP request | Description
  - [OmniCoreModelAndStateManagementApi.DeviceCredential](docs/DeviceCredential.md)
  - [OmniCoreModelAndStateManagementApi.DeviceRegistry](docs/DeviceRegistry.md)
  - [OmniCoreModelAndStateManagementApi.DeviceState](docs/DeviceState.md)
- - [OmniCoreModelAndStateManagementApi.EnableVault](docs/EnableVault.md)
  - [OmniCoreModelAndStateManagementApi.ErrorFrame](docs/ErrorFrame.md)
  - [OmniCoreModelAndStateManagementApi.ErrorStatus](docs/ErrorStatus.md)
  - [OmniCoreModelAndStateManagementApi.EventNotificationConfig](docs/EventNotificationConfig.md)
@@ -204,6 +205,7 @@ Class | Method | HTTP request | Description
  - [OmniCoreModelAndStateManagementApi.GatewayConfig](docs/GatewayConfig.md)
  - [OmniCoreModelAndStateManagementApi.GenericErrorResponse](docs/GenericErrorResponse.md)
  - [OmniCoreModelAndStateManagementApi.GetExportsResponse](docs/GetExportsResponse.md)
+ - [OmniCoreModelAndStateManagementApi.GetKeysResponse](docs/GetKeysResponse.md)
  - [OmniCoreModelAndStateManagementApi.GetReplaysResponse](docs/GetReplaysResponse.md)
  - [OmniCoreModelAndStateManagementApi.HttpConfig](docs/HttpConfig.md)
  - [OmniCoreModelAndStateManagementApi.Info](docs/Info.md)
@@ -231,6 +233,7 @@ Class | Method | HTTP request | Description
  - [OmniCoreModelAndStateManagementApi.Sink](docs/Sink.md)
  - [OmniCoreModelAndStateManagementApi.StartExportBody](docs/StartExportBody.md)
  - [OmniCoreModelAndStateManagementApi.VaultConfiguration](docs/VaultConfiguration.md)
+ - [OmniCoreModelAndStateManagementApi.VaultEncryptionKey](docs/VaultEncryptionKey.md)
  - [OmniCoreModelAndStateManagementApi.VaultStatus](docs/VaultStatus.md)
  - [OmniCoreModelAndStateManagementApi.VaultStatusDetails](docs/VaultStatusDetails.md)
  - [OmniCoreModelAndStateManagementApi.X509CertificateDetails](docs/X509CertificateDetails.md)

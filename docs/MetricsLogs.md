@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **fileSize** | **Number** |  | [optional] 
 **noofoperations** | **Number** |  | [optional] 
 **updatedon** | **String** |  | [optional] 
-**noOfReplays** | **Number** |  | [optional] 
-**noOfExports** | **Number** |  | [optional] 
+**replayFileSize** | **Number** |  | [optional] 
+**exportFileSize** | **Number** |  | [optional] 
 
 

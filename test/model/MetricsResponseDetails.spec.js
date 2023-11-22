@@ -78,6 +78,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property noOfReplays (base name: "noOfReplays")', function() {
+      // uncomment below and update the code to test the property noOfReplays
+      //var instance = new OmniCoreModelAndStateManagementApi.MetricsResponseDetails();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property noOfExports (base name: "noOfExports")', function() {
+      // uncomment below and update the code to test the property noOfExports
+      //var instance = new OmniCoreModelAndStateManagementApi.MetricsResponseDetails();
+      //expect(instance).to.be();
+    });
+
     it('should have the property operations (base name: "Operations")', function() {
       // uncomment below and update the code to test the property operations
       //var instance = new OmniCoreModelAndStateManagementApi.MetricsResponseDetails();

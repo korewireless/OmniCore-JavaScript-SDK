@@ -8,7 +8,9 @@ Name | Type | Description | Notes
 **noOfFiles** | **Number** |  | [optional] 
 **fileSize** | **Number** |  | [optional] 
 **noofoperations** | **Number** |  | [optional] 
+**noOfReplays** | **Number** |  | [optional] 
+**noOfExports** | **Number** |  | [optional] 
 **operations** | [**[OperationMetrics]**](OperationMetrics.md) |  | [optional] 
-**detailsForTimePeriod** | [**[MetricsData]**](MetricsData.md) |  | [optional] 
+**detailsForTimePeriod** | [**MetricsData**](MetricsData.md) |  | [optional] 
 
 

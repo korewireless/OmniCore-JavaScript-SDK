@@ -61,11 +61,17 @@ class MetricsResponseDetails {
             if (data.hasOwnProperty('noofoperations')) {
                 obj['noofoperations'] = ApiClient.convertToType(data['noofoperations'], 'Number');
             }
+            if (data.hasOwnProperty('noOfReplays')) {
+                obj['noOfReplays'] = ApiClient.convertToType(data['noOfReplays'], 'Number');
+            }
+            if (data.hasOwnProperty('noOfExports')) {
+                obj['noOfExports'] = ApiClient.convertToType(data['noOfExports'], 'Number');
+            }
             if (data.hasOwnProperty('Operations')) {
                 obj['Operations'] = ApiClient.convertToType(data['Operations'], [OperationMetrics]);
             }
             if (data.hasOwnProperty('detailsForTimePeriod')) {
-                obj['detailsForTimePeriod'] = ApiClient.convertToType(data['detailsForTimePeriod'], [MetricsData]);
+                obj['detailsForTimePeriod'] = MetricsData.constructFromObject(data['detailsForTimePeriod']);
             }
         }
         return obj;
@@ -91,15 +97,9 @@ class MetricsResponseDetails {
                 OperationMetrics.validateJsonObject(item);
             };
         }
+        // validate the optional field `detailsForTimePeriod`
         if (data['detailsForTimePeriod']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['detailsForTimePeriod'])) {
-                throw new Error("Expected the field `detailsForTimePeriod` to be an array in the JSON data but got " + data['detailsForTimePeriod']);
-            }
-            // validate the optional field `detailsForTimePeriod` (array)
-            for (const item of data['detailsForTimePeriod']) {
-                MetricsData.validateJsonObject(item);
-            };
+          MetricsData.validateJSON(data['detailsForTimePeriod']);
         }
 
         return true;
@@ -131,12 +131,22 @@ MetricsResponseDetails.prototype['fileSize'] = undefined;
 MetricsResponseDetails.prototype['noofoperations'] = undefined;
 
 /**
+ * @member {Number} noOfReplays
+ */
+MetricsResponseDetails.prototype['noOfReplays'] = undefined;
+
+/**
+ * @member {Number} noOfExports
+ */
+MetricsResponseDetails.prototype['noOfExports'] = undefined;
+
+/**
  * @member {Array.<module:model/OperationMetrics>} Operations
  */
 MetricsResponseDetails.prototype['Operations'] = undefined;
 
 /**
- * @member {Array.<module:model/MetricsData>} detailsForTimePeriod
+ * @member {module:model/MetricsData} detailsForTimePeriod
  */
 MetricsResponseDetails.prototype['detailsForTimePeriod'] = undefined;
 

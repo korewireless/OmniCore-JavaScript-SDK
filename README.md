@@ -3,8 +3,8 @@
 OmniCoreModelAndStateManagementApi - JavaScript client for omni_core_model_and_state_management_api
 This is an OmniCore Model and State Management server.
 
-- API version: 1.8.6
-- Package version: 1.8.6
+- API version: 1.8.7
+- Package version: 1.8.7
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen
 For more information, please visit [http://www.korewireless.com](http://www.korewireless.com)
 
@@ -161,6 +161,7 @@ Class | Method | HTTP request | Description
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**createVaultKey**](docs/VaultApi.md#createVaultKey) | **POST** /vault/subscriptions/{subscriptionid}/encryptionkeys | 
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**deleteConfiguration**](docs/VaultApi.md#deleteConfiguration) | **DELETE** /vault/subscriptions/{subscriptionid}/configurations/{configid} | 
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**deleteVaultKey**](docs/VaultApi.md#deleteVaultKey) | **DELETE** /vault/subscriptions/{subscriptionid}/encryptionkeys/{keyid} | 
+*OmniCoreModelAndStateManagementApi.VaultApi* | [**enableEncryption**](docs/VaultApi.md#enableEncryption) | **POST** /vault/subscriptions/{subscriptionid}/encryption | 
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**getExports**](docs/VaultApi.md#getExports) | **GET** /vault/subscriptions/{subscriptionid}/exports | 
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**getRegistryData**](docs/VaultApi.md#getRegistryData) | **GET** /vault/subscriptions/{subscriptionid}/folders | 
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**getReplays**](docs/VaultApi.md#getReplays) | **GET** /vault/subscriptions/{subscriptionid}/replays | 
@@ -170,6 +171,7 @@ Class | Method | HTTP request | Description
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**getVaultKeys**](docs/VaultApi.md#getVaultKeys) | **GET** /vault/subscriptions/{subscriptionid}/encryptionkeys | 
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**getVaultMetrics**](docs/VaultApi.md#getVaultMetrics) | **GET** /vault/subscriptions/{subscriptionid}/metrics | 
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**getVaultStatus**](docs/VaultApi.md#getVaultStatus) | **GET** /vault/subscriptions/{subscriptionid}/status | 
+*OmniCoreModelAndStateManagementApi.VaultApi* | [**setRetention**](docs/VaultApi.md#setRetention) | **POST** /vault/subscriptions/{subscriptionid}/retention | 
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**startExport**](docs/VaultApi.md#startExport) | **POST** /vault/subscriptions/{subscriptionid}/exports | 
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**startReplay**](docs/VaultApi.md#startReplay) | **POST** /vault/subscriptions/{subscriptionid}/replays | 
 
@@ -193,6 +195,7 @@ Class | Method | HTTP request | Description
  - [OmniCoreModelAndStateManagementApi.DeviceCredential](docs/DeviceCredential.md)
  - [OmniCoreModelAndStateManagementApi.DeviceRegistry](docs/DeviceRegistry.md)
  - [OmniCoreModelAndStateManagementApi.DeviceState](docs/DeviceState.md)
+ - [OmniCoreModelAndStateManagementApi.EnableEncryptionBody](docs/EnableEncryptionBody.md)
  - [OmniCoreModelAndStateManagementApi.ErrorFrame](docs/ErrorFrame.md)
  - [OmniCoreModelAndStateManagementApi.ErrorStatus](docs/ErrorStatus.md)
  - [OmniCoreModelAndStateManagementApi.EventNotificationConfig](docs/EventNotificationConfig.md)
@@ -230,6 +233,7 @@ Class | Method | HTTP request | Description
  - [OmniCoreModelAndStateManagementApi.RegistryCredential](docs/RegistryCredential.md)
  - [OmniCoreModelAndStateManagementApi.Replay](docs/Replay.md)
  - [OmniCoreModelAndStateManagementApi.ReplayBody](docs/ReplayBody.md)
+ - [OmniCoreModelAndStateManagementApi.SetRetentionBody](docs/SetRetentionBody.md)
  - [OmniCoreModelAndStateManagementApi.Sink](docs/Sink.md)
  - [OmniCoreModelAndStateManagementApi.StartExportBody](docs/StartExportBody.md)
  - [OmniCoreModelAndStateManagementApi.VaultConfiguration](docs/VaultConfiguration.md)

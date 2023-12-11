@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new OmniCoreModelAndStateManagementApi.DeviceState();
+    instance = new OmniCoreModelAndStateManagementApi.EnableEncryptionBody();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,28 @@
       object[property] = value;
   }
 
-  describe('DeviceState', function() {
-    it('should create an instance of DeviceState', function() {
-      // uncomment below and update the code to test DeviceState
-      //var instance = new OmniCoreModelAndStateManagementApi.DeviceState();
-      //expect(instance).to.be.a(OmniCoreModelAndStateManagementApi.DeviceState);
+  describe('EnableEncryptionBody', function() {
+    it('should create an instance of EnableEncryptionBody', function() {
+      // uncomment below and update the code to test EnableEncryptionBody
+      //var instance = new OmniCoreModelAndStateManagementApi.EnableEncryptionBody();
+      //expect(instance).to.be.a(OmniCoreModelAndStateManagementApi.EnableEncryptionBody);
     });
 
-    it('should have the property binaryData (base name: "binaryData")', function() {
-      // uncomment below and update the code to test the property binaryData
-      //var instance = new OmniCoreModelAndStateManagementApi.DeviceState();
+    it('should have the property action (base name: "action")', function() {
+      // uncomment below and update the code to test the property action
+      //var instance = new OmniCoreModelAndStateManagementApi.EnableEncryptionBody();
       //expect(instance).to.be();
     });
 
-    it('should have the property updateTime (base name: "updateTime")', function() {
-      // uncomment below and update the code to test the property updateTime
-      //var instance = new OmniCoreModelAndStateManagementApi.DeviceState();
+    it('should have the property isEncrypted (base name: "isEncrypted")', function() {
+      // uncomment below and update the code to test the property isEncrypted
+      //var instance = new OmniCoreModelAndStateManagementApi.EnableEncryptionBody();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property encryptionKeyId (base name: "encryptionKeyId")', function() {
+      // uncomment below and update the code to test the property encryptionKeyId
+      //var instance = new OmniCoreModelAndStateManagementApi.EnableEncryptionBody();
       //expect(instance).to.be();
     });
 

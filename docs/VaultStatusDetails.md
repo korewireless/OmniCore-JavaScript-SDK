@@ -11,5 +11,8 @@ Name | Type | Description | Notes
 **updatedon** | **String** |  | [optional] 
 **createdOn** | **String** |  | [optional] 
 **mqttId** | **String** |  | [optional] 
+**retentionPeriod** | **Number** |  | [optional] 
+**encryptionKeyId** | **Number** |  | [optional] 
+**isEncrypted** | **Boolean** |  | [optional] 
 
 

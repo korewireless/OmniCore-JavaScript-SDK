@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**createVaultKey**](VaultApi.md#createVaultKey) | **POST** /vault/subscriptions/{subscriptionid}/encryptionkeys | 
 [**deleteConfiguration**](VaultApi.md#deleteConfiguration) | **DELETE** /vault/subscriptions/{subscriptionid}/configurations/{configid} | 
 [**deleteVaultKey**](VaultApi.md#deleteVaultKey) | **DELETE** /vault/subscriptions/{subscriptionid}/encryptionkeys/{keyid} | 
+[**enableEncryption**](VaultApi.md#enableEncryption) | **POST** /vault/subscriptions/{subscriptionid}/encryption | 
 [**getExports**](VaultApi.md#getExports) | **GET** /vault/subscriptions/{subscriptionid}/exports | 
 [**getRegistryData**](VaultApi.md#getRegistryData) | **GET** /vault/subscriptions/{subscriptionid}/folders | 
 [**getReplays**](VaultApi.md#getReplays) | **GET** /vault/subscriptions/{subscriptionid}/replays | 
@@ -17,6 +18,7 @@ Method | HTTP request | Description
 [**getVaultKeys**](VaultApi.md#getVaultKeys) | **GET** /vault/subscriptions/{subscriptionid}/encryptionkeys | 
 [**getVaultMetrics**](VaultApi.md#getVaultMetrics) | **GET** /vault/subscriptions/{subscriptionid}/metrics | 
 [**getVaultStatus**](VaultApi.md#getVaultStatus) | **GET** /vault/subscriptions/{subscriptionid}/status | 
+[**setRetention**](VaultApi.md#setRetention) | **POST** /vault/subscriptions/{subscriptionid}/retention | 
 [**startExport**](VaultApi.md#startExport) | **POST** /vault/subscriptions/{subscriptionid}/exports | 
 [**startReplay**](VaultApi.md#startReplay) | **POST** /vault/subscriptions/{subscriptionid}/replays | 
 
@@ -247,6 +249,64 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## enableEncryption
+
+> Frame enableEncryption(subscriptionid, opts)
+
+
+
+Enable Encryption
+
+### Example
+
+```javascript
+import OmniCoreModelAndStateManagementApi from 'omni_core_model_and_state_management_api';
+let defaultClient = OmniCoreModelAndStateManagementApi.ApiClient.instance;
+// Configure API key authorization: apiKey
+let apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new OmniCoreModelAndStateManagementApi.VaultApi();
+let subscriptionid = "subscriptionid_example"; // String | Subscription ID
+let opts = {
+  'enableEncryptionBody': new OmniCoreModelAndStateManagementApi.EnableEncryptionBody() // EnableEncryptionBody | application/json
+};
+apiInstance.enableEncryption(subscriptionid, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subscriptionid** | **String**| Subscription ID | 
+ **enableEncryptionBody** | [**EnableEncryptionBody**](EnableEncryptionBody.md)| application/json | [optional] 
+
+### Return type
+
+[**Frame**](Frame.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
@@ -751,6 +811,64 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## setRetention
+
+> Frame setRetention(subscriptionid, opts)
+
+
+
+Set Retention Period
+
+### Example
+
+```javascript
+import OmniCoreModelAndStateManagementApi from 'omni_core_model_and_state_management_api';
+let defaultClient = OmniCoreModelAndStateManagementApi.ApiClient.instance;
+// Configure API key authorization: apiKey
+let apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new OmniCoreModelAndStateManagementApi.VaultApi();
+let subscriptionid = "subscriptionid_example"; // String | Subscription ID
+let opts = {
+  'setRetentionBody': new OmniCoreModelAndStateManagementApi.SetRetentionBody() // SetRetentionBody | application/json
+};
+apiInstance.setRetention(subscriptionid, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subscriptionid** | **String**| Subscription ID | 
+ **setRetentionBody** | [**SetRetentionBody**](SetRetentionBody.md)| application/json | [optional] 
+
+### Return type
+
+[**Frame**](Frame.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 

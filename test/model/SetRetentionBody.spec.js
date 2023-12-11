@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new OmniCoreModelAndStateManagementApi.DeviceState();
+    instance = new OmniCoreModelAndStateManagementApi.SetRetentionBody();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,16 @@
       object[property] = value;
   }
 
-  describe('DeviceState', function() {
-    it('should create an instance of DeviceState', function() {
-      // uncomment below and update the code to test DeviceState
-      //var instance = new OmniCoreModelAndStateManagementApi.DeviceState();
-      //expect(instance).to.be.a(OmniCoreModelAndStateManagementApi.DeviceState);
+  describe('SetRetentionBody', function() {
+    it('should create an instance of SetRetentionBody', function() {
+      // uncomment below and update the code to test SetRetentionBody
+      //var instance = new OmniCoreModelAndStateManagementApi.SetRetentionBody();
+      //expect(instance).to.be.a(OmniCoreModelAndStateManagementApi.SetRetentionBody);
     });
 
-    it('should have the property binaryData (base name: "binaryData")', function() {
-      // uncomment below and update the code to test the property binaryData
-      //var instance = new OmniCoreModelAndStateManagementApi.DeviceState();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property updateTime (base name: "updateTime")', function() {
-      // uncomment below and update the code to test the property updateTime
-      //var instance = new OmniCoreModelAndStateManagementApi.DeviceState();
+    it('should have the property retentionPeriod (base name: "retentionPeriod")', function() {
+      // uncomment below and update the code to test the property retentionPeriod
+      //var instance = new OmniCoreModelAndStateManagementApi.SetRetentionBody();
       //expect(instance).to.be();
     });
 

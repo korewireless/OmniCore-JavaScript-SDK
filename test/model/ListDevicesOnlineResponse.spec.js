@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new OmniCoreModelAndStateManagementApi.StartExportBody();
+    instance = new OmniCoreModelAndStateManagementApi.ListDevicesOnlineResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,34 @@
       object[property] = value;
   }
 
-  describe('StartExportBody', function() {
-    it('should create an instance of StartExportBody', function() {
-      // uncomment below and update the code to test StartExportBody
-      //var instance = new OmniCoreModelAndStateManagementApi.StartExportBody();
-      //expect(instance).to.be.a(OmniCoreModelAndStateManagementApi.StartExportBody);
+  describe('ListDevicesOnlineResponse', function() {
+    it('should create an instance of ListDevicesOnlineResponse', function() {
+      // uncomment below and update the code to test ListDevicesOnlineResponse
+      //var instance = new OmniCoreModelAndStateManagementApi.ListDevicesOnlineResponse();
+      //expect(instance).to.be.a(OmniCoreModelAndStateManagementApi.ListDevicesOnlineResponse);
     });
 
-    it('should have the property source (base name: "source")', function() {
-      // uncomment below and update the code to test the property source
-      //var instance = new OmniCoreModelAndStateManagementApi.StartExportBody();
+    it('should have the property devices (base name: "devices")', function() {
+      // uncomment below and update the code to test the property devices
+      //var instance = new OmniCoreModelAndStateManagementApi.ListDevicesOnlineResponse();
       //expect(instance).to.be();
     });
 
-    it('should have the property destination (base name: "destination")', function() {
-      // uncomment below and update the code to test the property destination
-      //var instance = new OmniCoreModelAndStateManagementApi.StartExportBody();
+    it('should have the property pageNumber (base name: "pageNumber")', function() {
+      // uncomment below and update the code to test the property pageNumber
+      //var instance = new OmniCoreModelAndStateManagementApi.ListDevicesOnlineResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property pageSize (base name: "pageSize")', function() {
+      // uncomment below and update the code to test the property pageSize
+      //var instance = new OmniCoreModelAndStateManagementApi.ListDevicesOnlineResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property totalCount (base name: "totalCount")', function() {
+      // uncomment below and update the code to test the property totalCount
+      //var instance = new OmniCoreModelAndStateManagementApi.ListDevicesOnlineResponse();
       //expect(instance).to.be();
     });
 

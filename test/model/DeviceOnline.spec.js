@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new OmniCoreModelAndStateManagementApi.Sink();
+    instance = new OmniCoreModelAndStateManagementApi.DeviceOnline();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,52 +47,40 @@
       object[property] = value;
   }
 
-  describe('Sink', function() {
-    it('should create an instance of Sink', function() {
-      // uncomment below and update the code to test Sink
-      //var instance = new OmniCoreModelAndStateManagementApi.Sink();
-      //expect(instance).to.be.a(OmniCoreModelAndStateManagementApi.Sink);
+  describe('DeviceOnline', function() {
+    it('should create an instance of DeviceOnline', function() {
+      // uncomment below and update the code to test DeviceOnline
+      //var instance = new OmniCoreModelAndStateManagementApi.DeviceOnline();
+      //expect(instance).to.be.a(OmniCoreModelAndStateManagementApi.DeviceOnline);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new OmniCoreModelAndStateManagementApi.Sink();
+      //var instance = new OmniCoreModelAndStateManagementApi.DeviceOnline();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property registry (base name: "registry")', function() {
+      // uncomment below and update the code to test the property registry
+      //var instance = new OmniCoreModelAndStateManagementApi.DeviceOnline();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property clientOnline (base name: "clientOnline")', function() {
+      // uncomment below and update the code to test the property clientOnline
+      //var instance = new OmniCoreModelAndStateManagementApi.DeviceOnline();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property lastHeartbeatTime (base name: "lastHeartbeatTime")', function() {
+      // uncomment below and update the code to test the property lastHeartbeatTime
+      //var instance = new OmniCoreModelAndStateManagementApi.DeviceOnline();
       //expect(instance).to.be();
     });
 
     it('should have the property subscription (base name: "subscription")', function() {
       // uncomment below and update the code to test the property subscription
-      //var instance = new OmniCoreModelAndStateManagementApi.Sink();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property sink (base name: "sink")', function() {
-      // uncomment below and update the code to test the property sink
-      //var instance = new OmniCoreModelAndStateManagementApi.Sink();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property config (base name: "config")', function() {
-      // uncomment below and update the code to test the property config
-      //var instance = new OmniCoreModelAndStateManagementApi.Sink();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property status (base name: "status")', function() {
-      // uncomment below and update the code to test the property status
-      //var instance = new OmniCoreModelAndStateManagementApi.Sink();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property createdon (base name: "createdon")', function() {
-      // uncomment below and update the code to test the property createdon
-      //var instance = new OmniCoreModelAndStateManagementApi.Sink();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property updatedon (base name: "updatedon")', function() {
-      // uncomment below and update the code to test the property updatedon
-      //var instance = new OmniCoreModelAndStateManagementApi.Sink();
+      //var instance = new OmniCoreModelAndStateManagementApi.DeviceOnline();
       //expect(instance).to.be();
     });
 

@@ -3,8 +3,8 @@
 OmniCoreModelAndStateManagementApi - JavaScript client for omni_core_model_and_state_management_api
 This is an OmniCore Model and State Management server.
 
-- API version: 1.8.7
-- Package version: 1.8.7
+- API version: 1.8.10
+- Package version: 1.8.10
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen
 For more information, please visit [http://www.korewireless.com](http://www.korewireless.com)
 
@@ -140,6 +140,7 @@ Class | Method | HTTP request | Description
 *OmniCoreModelAndStateManagementApi.DeviceApi* | [**getDevice**](docs/DeviceApi.md#getDevice) | **GET** /omnicore/subscriptions/{subscriptionId}/registries/{registryId}/devices/{deviceId} | 
 *OmniCoreModelAndStateManagementApi.DeviceApi* | [**getDevices**](docs/DeviceApi.md#getDevices) | **GET** /omnicore/subscriptions/{subscriptionId}/registries/{registryId}/devices | 
 *OmniCoreModelAndStateManagementApi.DeviceApi* | [**getStates**](docs/DeviceApi.md#getStates) | **GET** /omnicore/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/states | 
+*OmniCoreModelAndStateManagementApi.DeviceApi* | [**getSubscriptionDevices**](docs/DeviceApi.md#getSubscriptionDevices) | **GET** /omnicore/subscriptions/{subscriptionId}/devices | 
 *OmniCoreModelAndStateManagementApi.DeviceApi* | [**sendCommandToDevice**](docs/DeviceApi.md#sendCommandToDevice) | **POST** /omnicore/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/sendCommandToDevice | 
 *OmniCoreModelAndStateManagementApi.DeviceApi* | [**unBindDevice**](docs/DeviceApi.md#unBindDevice) | **POST** /omnicore/subscriptions/{subscriptionId}/registries/{registryId}/unbindDeviceFromGateway | 
 *OmniCoreModelAndStateManagementApi.DeviceApi* | [**unBindDevices**](docs/DeviceApi.md#unBindDevices) | **POST** /omnicore/subscriptions/{subscriptionId}/registries/{registryId}/unbindDevicesFromGateway | 
@@ -193,6 +194,7 @@ Class | Method | HTTP request | Description
  - [OmniCoreModelAndStateManagementApi.DeviceConfig](docs/DeviceConfig.md)
  - [OmniCoreModelAndStateManagementApi.DeviceConfiguration](docs/DeviceConfiguration.md)
  - [OmniCoreModelAndStateManagementApi.DeviceCredential](docs/DeviceCredential.md)
+ - [OmniCoreModelAndStateManagementApi.DeviceOnline](docs/DeviceOnline.md)
  - [OmniCoreModelAndStateManagementApi.DeviceRegistry](docs/DeviceRegistry.md)
  - [OmniCoreModelAndStateManagementApi.DeviceState](docs/DeviceState.md)
  - [OmniCoreModelAndStateManagementApi.EnableEncryptionBody](docs/EnableEncryptionBody.md)
@@ -215,6 +217,7 @@ Class | Method | HTTP request | Description
  - [OmniCoreModelAndStateManagementApi.ListDeviceConfigVersionsResponse](docs/ListDeviceConfigVersionsResponse.md)
  - [OmniCoreModelAndStateManagementApi.ListDeviceRegistries](docs/ListDeviceRegistries.md)
  - [OmniCoreModelAndStateManagementApi.ListDeviceStatesResponse](docs/ListDeviceStatesResponse.md)
+ - [OmniCoreModelAndStateManagementApi.ListDevicesOnlineResponse](docs/ListDevicesOnlineResponse.md)
  - [OmniCoreModelAndStateManagementApi.ListDevicesResponse](docs/ListDevicesResponse.md)
  - [OmniCoreModelAndStateManagementApi.ListSinks](docs/ListSinks.md)
  - [OmniCoreModelAndStateManagementApi.LogLevel](docs/LogLevel.md)

@@ -12,22 +12,22 @@
  */
 
 import ApiClient from '../ApiClient';
-import Device from './Device';
+import DeviceOnline from './DeviceOnline';
 
 /**
- * The ListDevicesResponse model module.
- * @module model/ListDevicesResponse
+ * The ListDevicesOnlineResponse model module.
+ * @module model/ListDevicesOnlineResponse
  * @version 1.8.10
  */
-class ListDevicesResponse {
+class ListDevicesOnlineResponse {
     /**
-     * Constructs a new <code>ListDevicesResponse</code>.
-     * @alias module:model/ListDevicesResponse
-     * @param devices {Array.<module:model/Device>} 
+     * Constructs a new <code>ListDevicesOnlineResponse</code>.
+     * @alias module:model/ListDevicesOnlineResponse
+     * @param devices {Array.<module:model/DeviceOnline>} 
      */
     constructor(devices) { 
         
-        ListDevicesResponse.initialize(this, devices);
+        ListDevicesOnlineResponse.initialize(this, devices);
     }
 
     /**
@@ -40,18 +40,18 @@ class ListDevicesResponse {
     }
 
     /**
-     * Constructs a <code>ListDevicesResponse</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ListDevicesOnlineResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ListDevicesResponse} obj Optional instance to populate.
-     * @return {module:model/ListDevicesResponse} The populated <code>ListDevicesResponse</code> instance.
+     * @param {module:model/ListDevicesOnlineResponse} obj Optional instance to populate.
+     * @return {module:model/ListDevicesOnlineResponse} The populated <code>ListDevicesOnlineResponse</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ListDevicesResponse();
+            obj = obj || new ListDevicesOnlineResponse();
 
             if (data.hasOwnProperty('devices')) {
-                obj['devices'] = ApiClient.convertToType(data['devices'], [Device]);
+                obj['devices'] = ApiClient.convertToType(data['devices'], [DeviceOnline]);
             }
             if (data.hasOwnProperty('pageNumber')) {
                 obj['pageNumber'] = ApiClient.convertToType(data['pageNumber'], 'Number');
@@ -67,13 +67,13 @@ class ListDevicesResponse {
     }
 
     /**
-     * Validates the JSON data with respect to <code>ListDevicesResponse</code>.
+     * Validates the JSON data with respect to <code>ListDevicesOnlineResponse</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ListDevicesResponse</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ListDevicesOnlineResponse</code>.
      */
     static validateJSON(data) {
         // check to make sure all required properties are present in the JSON string
-        for (const property of ListDevicesResponse.RequiredProperties) {
+        for (const property of ListDevicesOnlineResponse.RequiredProperties) {
             if (!data[property]) {
                 throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
             }
@@ -85,7 +85,7 @@ class ListDevicesResponse {
             }
             // validate the optional field `devices` (array)
             for (const item of data['devices']) {
-                Device.validateJsonObject(item);
+                DeviceOnline.validateJsonObject(item);
             };
         }
 
@@ -95,32 +95,32 @@ class ListDevicesResponse {
 
 }
 
-ListDevicesResponse.RequiredProperties = ["devices"];
+ListDevicesOnlineResponse.RequiredProperties = ["devices"];
 
 /**
- * @member {Array.<module:model/Device>} devices
+ * @member {Array.<module:model/DeviceOnline>} devices
  */
-ListDevicesResponse.prototype['devices'] = undefined;
+ListDevicesOnlineResponse.prototype['devices'] = undefined;
 
 /**
  * @member {Number} pageNumber
  */
-ListDevicesResponse.prototype['pageNumber'] = undefined;
+ListDevicesOnlineResponse.prototype['pageNumber'] = undefined;
 
 /**
  * @member {Number} pageSize
  */
-ListDevicesResponse.prototype['pageSize'] = undefined;
+ListDevicesOnlineResponse.prototype['pageSize'] = undefined;
 
 /**
  * @member {Number} totalCount
  */
-ListDevicesResponse.prototype['totalCount'] = undefined;
+ListDevicesOnlineResponse.prototype['totalCount'] = undefined;
 
 
 
 
 
 
-export default ListDevicesResponse;
+export default ListDevicesOnlineResponse;
 

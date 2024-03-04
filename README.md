@@ -3,8 +3,8 @@
 OmniCoreModelAndStateManagementApi - JavaScript client for omni_core_model_and_state_management_api
 This is an OmniCore Model and State Management server.
 
-- API version: 1.8.10
-- Package version: 1.8.10
+- API version: 1.8.12
+- Package version: 1.8.12
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen
 For more information, please visit [http://www.korewireless.com](http://www.korewireless.com)
 
@@ -139,8 +139,8 @@ Class | Method | HTTP request | Description
 *OmniCoreModelAndStateManagementApi.DeviceApi* | [**getConfig**](docs/DeviceApi.md#getConfig) | **GET** /omnicore/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/configVersions | 
 *OmniCoreModelAndStateManagementApi.DeviceApi* | [**getDevice**](docs/DeviceApi.md#getDevice) | **GET** /omnicore/subscriptions/{subscriptionId}/registries/{registryId}/devices/{deviceId} | 
 *OmniCoreModelAndStateManagementApi.DeviceApi* | [**getDevices**](docs/DeviceApi.md#getDevices) | **GET** /omnicore/subscriptions/{subscriptionId}/registries/{registryId}/devices | 
+*OmniCoreModelAndStateManagementApi.DeviceApi* | [**getDevicesLastSeen**](docs/DeviceApi.md#getDevicesLastSeen) | **GET** /omnicore/subscriptions/{subscriptionId}/devices | 
 *OmniCoreModelAndStateManagementApi.DeviceApi* | [**getStates**](docs/DeviceApi.md#getStates) | **GET** /omnicore/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/states | 
-*OmniCoreModelAndStateManagementApi.DeviceApi* | [**getSubscriptionDevices**](docs/DeviceApi.md#getSubscriptionDevices) | **GET** /omnicore/subscriptions/{subscriptionId}/devices | 
 *OmniCoreModelAndStateManagementApi.DeviceApi* | [**sendCommandToDevice**](docs/DeviceApi.md#sendCommandToDevice) | **POST** /omnicore/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/sendCommandToDevice | 
 *OmniCoreModelAndStateManagementApi.DeviceApi* | [**unBindDevice**](docs/DeviceApi.md#unBindDevice) | **POST** /omnicore/subscriptions/{subscriptionId}/registries/{registryId}/unbindDeviceFromGateway | 
 *OmniCoreModelAndStateManagementApi.DeviceApi* | [**unBindDevices**](docs/DeviceApi.md#unBindDevices) | **POST** /omnicore/subscriptions/{subscriptionId}/registries/{registryId}/unbindDevicesFromGateway | 

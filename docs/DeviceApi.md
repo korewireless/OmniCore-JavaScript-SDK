@@ -12,8 +12,8 @@ Method | HTTP request | Description
 [**getConfig**](DeviceApi.md#getConfig) | **GET** /omnicore/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/configVersions | 
 [**getDevice**](DeviceApi.md#getDevice) | **GET** /omnicore/subscriptions/{subscriptionId}/registries/{registryId}/devices/{deviceId} | 
 [**getDevices**](DeviceApi.md#getDevices) | **GET** /omnicore/subscriptions/{subscriptionId}/registries/{registryId}/devices | 
+[**getDevicesLastSeen**](DeviceApi.md#getDevicesLastSeen) | **GET** /omnicore/subscriptions/{subscriptionId}/devices | 
 [**getStates**](DeviceApi.md#getStates) | **GET** /omnicore/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/states | 
-[**getSubscriptionDevices**](DeviceApi.md#getSubscriptionDevices) | **GET** /omnicore/subscriptions/{subscriptionId}/devices | 
 [**sendCommandToDevice**](DeviceApi.md#sendCommandToDevice) | **POST** /omnicore/subscriptions/{subscriptionid}/registries/{registryId}/devices/{deviceId}/sendCommandToDevice | 
 [**unBindDevice**](DeviceApi.md#unBindDevice) | **POST** /omnicore/subscriptions/{subscriptionId}/registries/{registryId}/unbindDeviceFromGateway | 
 [**unBindDevices**](DeviceApi.md#unBindDevices) | **POST** /omnicore/subscriptions/{subscriptionId}/registries/{registryId}/unbindDevicesFromGateway | 
@@ -509,6 +509,80 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## getDevicesLastSeen
+
+> ListDevicesOnlineResponse getDevicesLastSeen(subscriptionId, opts)
+
+
+
+Get devices under a subscription sorted by last seen
+
+### Example
+
+```javascript
+import OmniCoreModelAndStateManagementApi from 'omni_core_model_and_state_management_api';
+let defaultClient = OmniCoreModelAndStateManagementApi.ApiClient.instance;
+// Configure API key authorization: apiKey
+let apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new OmniCoreModelAndStateManagementApi.DeviceApi();
+let subscriptionId = "subscriptionId_example"; // String | Subscription ID
+let opts = {
+  'pageNumber': 56, // Number | Page Number
+  'pageSize': 56, // Number | The maximum number of devices to return in the response. If this value is zero, the service will select a default size. 
+  'fieldMask': "fieldMask_example", // String | The fields of the Device resource to be returned to the response. The fields id and numId are always returned, along with any other fields specified. A comma-separated list of fully qualified names of fields. Example: 
+  'sortByClientOnline': true, // Boolean | Set to true to return devices sorted by last heartbeat 
+  'deviceIds': ["null"], // [String] | A list of device string IDs. For example, ['device0', 'device12']. If empty, this field is ignored. Maximum IDs: 10,000
+  'deviceNumIds': ["null"], // [String] | A list of device numeric IDs. If empty, this field is ignored. Maximum IDs: 10,000.
+  'gatewayListOptionsAssociationsDeviceId': "gatewayListOptionsAssociationsDeviceId_example", // String | If set, returns only the gateways with which the specified device is associated. The device ID can be numeric (num_id) or the user-defined string (id). For example, if 456 is specified, returns only the gateways to which the device with num_id 456 is bound.
+  'gatewayListOptionsAssociationsGatewayId': "gatewayListOptionsAssociationsGatewayId_example", // String | If set, only devices associated with the specified gateway are returned. The gateway ID can be numeric (num_id) or the user-defined string (id). For example, if 123 is specified, only devices bound to the gateway with num_id 123 are returned
+  'gatewayListOptionsGatewayType': "gatewayListOptionsGatewayType_example" // String | If GATEWAY is specified, only gateways are returned. If NON_GATEWAY is specified, only non-gateway devices are returned. If GATEWAY_TYPE_UNSPECIFIED is specified, all devices are returned.
+};
+apiInstance.getDevicesLastSeen(subscriptionId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subscriptionId** | **String**| Subscription ID | 
+ **pageNumber** | **Number**| Page Number | [optional] 
+ **pageSize** | **Number**| The maximum number of devices to return in the response. If this value is zero, the service will select a default size.  | [optional] 
+ **fieldMask** | **String**| The fields of the Device resource to be returned to the response. The fields id and numId are always returned, along with any other fields specified. A comma-separated list of fully qualified names of fields. Example:  | [optional] 
+ **sortByClientOnline** | **Boolean**| Set to true to return devices sorted by last heartbeat  | [optional] 
+ **deviceIds** | [**[String]**](String.md)| A list of device string IDs. For example, [&#39;device0&#39;, &#39;device12&#39;]. If empty, this field is ignored. Maximum IDs: 10,000 | [optional] 
+ **deviceNumIds** | [**[String]**](String.md)| A list of device numeric IDs. If empty, this field is ignored. Maximum IDs: 10,000. | [optional] 
+ **gatewayListOptionsAssociationsDeviceId** | **String**| If set, returns only the gateways with which the specified device is associated. The device ID can be numeric (num_id) or the user-defined string (id). For example, if 456 is specified, returns only the gateways to which the device with num_id 456 is bound. | [optional] 
+ **gatewayListOptionsAssociationsGatewayId** | **String**| If set, only devices associated with the specified gateway are returned. The gateway ID can be numeric (num_id) or the user-defined string (id). For example, if 123 is specified, only devices bound to the gateway with num_id 123 are returned | [optional] 
+ **gatewayListOptionsGatewayType** | **String**| If GATEWAY is specified, only gateways are returned. If NON_GATEWAY is specified, only non-gateway devices are returned. If GATEWAY_TYPE_UNSPECIFIED is specified, all devices are returned. | [optional] 
+
+### Return type
+
+[**ListDevicesOnlineResponse**](ListDevicesOnlineResponse.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## getStates
 
 > ListDeviceStatesResponse getStates(subscriptionid, registryId, deviceId, opts)
@@ -560,80 +634,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListDeviceStatesResponse**](ListDeviceStatesResponse.md)
-
-### Authorization
-
-[apiKey](../README.md#apiKey), [bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## getSubscriptionDevices
-
-> ListDevicesOnlineResponse getSubscriptionDevices(subscriptionId, opts)
-
-
-
-Get all devices under a subscription
-
-### Example
-
-```javascript
-import OmniCoreModelAndStateManagementApi from 'omni_core_model_and_state_management_api';
-let defaultClient = OmniCoreModelAndStateManagementApi.ApiClient.instance;
-// Configure API key authorization: apiKey
-let apiKey = defaultClient.authentications['apiKey'];
-apiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.apiKeyPrefix = 'Token';
-// Configure Bearer (JWT) access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
-
-let apiInstance = new OmniCoreModelAndStateManagementApi.DeviceApi();
-let subscriptionId = "subscriptionId_example"; // String | Subscription ID
-let opts = {
-  'pageNumber': 56, // Number | Page Number
-  'pageSize': 56, // Number | The maximum number of devices to return in the response. If this value is zero, the service will select a default size. 
-  'fieldMask': "fieldMask_example", // String | The fields of the Device resource to be returned to the response. The fields id and numId are always returned, along with any other fields specified. A comma-separated list of fully qualified names of fields. Example: 
-  'sortByClientOnline': true, // Boolean | Set to true to return devices sorted by last heartbeat 
-  'deviceIds': ["null"], // [String] | A list of device string IDs. For example, ['device0', 'device12']. If empty, this field is ignored. Maximum IDs: 10,000
-  'deviceNumIds': ["null"], // [String] | A list of device numeric IDs. If empty, this field is ignored. Maximum IDs: 10,000.
-  'gatewayListOptionsAssociationsDeviceId': "gatewayListOptionsAssociationsDeviceId_example", // String | If set, returns only the gateways with which the specified device is associated. The device ID can be numeric (num_id) or the user-defined string (id). For example, if 456 is specified, returns only the gateways to which the device with num_id 456 is bound.
-  'gatewayListOptionsAssociationsGatewayId': "gatewayListOptionsAssociationsGatewayId_example", // String | If set, only devices associated with the specified gateway are returned. The gateway ID can be numeric (num_id) or the user-defined string (id). For example, if 123 is specified, only devices bound to the gateway with num_id 123 are returned
-  'gatewayListOptionsGatewayType': "gatewayListOptionsGatewayType_example" // String | If GATEWAY is specified, only gateways are returned. If NON_GATEWAY is specified, only non-gateway devices are returned. If GATEWAY_TYPE_UNSPECIFIED is specified, all devices are returned.
-};
-apiInstance.getSubscriptionDevices(subscriptionId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **subscriptionId** | **String**| Subscription ID | 
- **pageNumber** | **Number**| Page Number | [optional] 
- **pageSize** | **Number**| The maximum number of devices to return in the response. If this value is zero, the service will select a default size.  | [optional] 
- **fieldMask** | **String**| The fields of the Device resource to be returned to the response. The fields id and numId are always returned, along with any other fields specified. A comma-separated list of fully qualified names of fields. Example:  | [optional] 
- **sortByClientOnline** | **Boolean**| Set to true to return devices sorted by last heartbeat  | [optional] 
- **deviceIds** | [**[String]**](String.md)| A list of device string IDs. For example, [&#39;device0&#39;, &#39;device12&#39;]. If empty, this field is ignored. Maximum IDs: 10,000 | [optional] 
- **deviceNumIds** | [**[String]**](String.md)| A list of device numeric IDs. If empty, this field is ignored. Maximum IDs: 10,000. | [optional] 
- **gatewayListOptionsAssociationsDeviceId** | **String**| If set, returns only the gateways with which the specified device is associated. The device ID can be numeric (num_id) or the user-defined string (id). For example, if 456 is specified, returns only the gateways to which the device with num_id 456 is bound. | [optional] 
- **gatewayListOptionsAssociationsGatewayId** | **String**| If set, only devices associated with the specified gateway are returned. The gateway ID can be numeric (num_id) or the user-defined string (id). For example, if 123 is specified, only devices bound to the gateway with num_id 123 are returned | [optional] 
- **gatewayListOptionsGatewayType** | **String**| If GATEWAY is specified, only gateways are returned. If NON_GATEWAY is specified, only non-gateway devices are returned. If GATEWAY_TYPE_UNSPECIFIED is specified, all devices are returned. | [optional] 
-
-### Return type
-
-[**ListDevicesOnlineResponse**](ListDevicesOnlineResponse.md)
 
 ### Authorization
 

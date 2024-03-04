@@ -21,5 +21,17 @@ Name | Type | Description | Notes
 **customOnboardEnabled** | **Boolean** |  | [optional] 
 **numberOfDevices** | **Number** |  | [optional] [readonly] 
 **numberOfGateways** | **Number** |  | [optional] [readonly] 
+**routeTarget** | **String** |  | [optional] 
+
+
+
+## Enum: RouteTargetEnum
+
+
+* `pubsub` (value: `"pubsub"`)
+
+* `kinesis` (value: `"kinesis"`)
+
+
 
 

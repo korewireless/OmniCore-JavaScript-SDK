@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createSink**](SinkApi.md#createSink) | **POST** /omnicore/subscriptions/{subscriptionId}/sinks | 
 [**deleteSink**](SinkApi.md#deleteSink) | **DELETE** /omnicore/subscriptions/{subscriptionId}/sinks/{sinkId} | 
-[**getASink**](SinkApi.md#getASink) | **GET** /omnicore/subscriptions/{subscriptionId}/sinks/{sinkId} | 
+[**getSink**](SinkApi.md#getSink) | **GET** /omnicore/subscriptions/{subscriptionId}/sinks/{sinkId} | 
 [**getSinks**](SinkApi.md#getSinks) | **GET** /omnicore/subscriptions/{subscriptionId}/sinks | Get All Sinks
 
 
@@ -125,9 +125,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## getASink
+## getSink
 
-> Sink getASink(subscriptionId, sinkId)
+> Sink getSink(subscriptionId, sinkId)
 
 
 
@@ -150,7 +150,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new OmniCoreModelAndStateManagementApi.SinkApi();
 let subscriptionId = "subscriptionId_example"; // String | Subscription ID
 let sinkId = "sinkId_example"; // String | Sink ID
-apiInstance.getASink(subscriptionId, sinkId, (error, data, response) => {
+apiInstance.getSink(subscriptionId, sinkId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

@@ -3,8 +3,8 @@
 OmniCoreModelAndStateManagementApi - JavaScript client for omni_core_model_and_state_management_api
 This is an OmniCore Model and State Management server.
 
-- API version: 1.8.17
-- Package version: 1.8.17
+- API version: 1.8.18
+- Package version: 1.8.18
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen
 For more information, please visit [http://www.korewireless.com](http://www.korewireless.com)
 
@@ -156,7 +156,7 @@ Class | Method | HTTP request | Description
 *OmniCoreModelAndStateManagementApi.RegistryApi* | [**updateRegistry**](docs/RegistryApi.md#updateRegistry) | **PATCH** /omnicore/subscriptions/{subscriptionId}/registries/{registryId} | 
 *OmniCoreModelAndStateManagementApi.SinkApi* | [**createSink**](docs/SinkApi.md#createSink) | **POST** /omnicore/subscriptions/{subscriptionId}/sinks | 
 *OmniCoreModelAndStateManagementApi.SinkApi* | [**deleteSink**](docs/SinkApi.md#deleteSink) | **DELETE** /omnicore/subscriptions/{subscriptionId}/sinks/{sinkId} | 
-*OmniCoreModelAndStateManagementApi.SinkApi* | [**getASink**](docs/SinkApi.md#getASink) | **GET** /omnicore/subscriptions/{subscriptionId}/sinks/{sinkId} | 
+*OmniCoreModelAndStateManagementApi.SinkApi* | [**getSink**](docs/SinkApi.md#getSink) | **GET** /omnicore/subscriptions/{subscriptionId}/sinks/{sinkId} | 
 *OmniCoreModelAndStateManagementApi.SinkApi* | [**getSinks**](docs/SinkApi.md#getSinks) | **GET** /omnicore/subscriptions/{subscriptionId}/sinks | Get All Sinks
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**createVaultConfiguration**](docs/VaultApi.md#createVaultConfiguration) | **POST** /vault/subscriptions/{subscriptionid}/configurations | 
 *OmniCoreModelAndStateManagementApi.VaultApi* | [**createVaultKey**](docs/VaultApi.md#createVaultKey) | **POST** /vault/subscriptions/{subscriptionid}/encryptionkeys | 

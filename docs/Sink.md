@@ -19,6 +19,8 @@ Name | Type | Description | Notes
 
 * `pubsub` (value: `"pubsub"`)
 
+* `kinesis` (value: `"kinesis"`)
+
 
 
 

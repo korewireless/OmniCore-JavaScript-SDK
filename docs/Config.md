@@ -4,6 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**connectionParameter** | **String** |  | [optional] 
+**connectionParameter** | **String** |  | 
+**region** | **String** |  | [optional] 
+**externalId** | **String** |  | [optional] 
 
 

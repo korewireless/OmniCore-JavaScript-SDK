@@ -32,5 +32,8 @@ Name | Type | Description | Notes
 **config** | [**DeviceConfig**](DeviceConfig.md) |  | [optional] 
 **state** | [**DeviceState**](DeviceState.md) |  | [optional] 
 **policy** | [**Policy**](Policy.md) |  | [optional] 
+**tcpUdpModelDetails** | [**DeviceTcpUdpModelDetails**](DeviceTcpUdpModelDetails.md) |  | [optional] 
+**tcpUdpModelId** | **Number** |  | [optional] 
+**isTcpUdpDevice** | **Boolean** |  | [optional] 
 
 

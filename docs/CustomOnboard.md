@@ -34,8 +34,5 @@ Name | Type | Description | Notes
 **policy** | [**Policy**](Policy.md) |  | [optional] 
 **customOnboardData** | **String** |  | [optional] 
 **isApprove** | **Boolean** |  | [optional] 
-**tcpUdpModelDetails** | [**CustomOnboardTcpUdpModelDetails**](CustomOnboardTcpUdpModelDetails.md) |  | [optional] 
-**tcpUdpModelId** | **Number** |  | [optional] 
-**isTcpUdpDevice** | **Boolean** |  | [optional] 
 
 

@@ -16,21 +16,21 @@ import TcpUdpImage from './TcpUdpImage';
 import TcpUdpPortDetail from './TcpUdpPortDetail';
 
 /**
- * The TcpUdpModel model module.
- * @module model/TcpUdpModel
+ * The CustomOnboardTcpUdpModelDetails model module.
+ * @module model/CustomOnboardTcpUdpModelDetails
  * @version 1.8.15
  */
-class TcpUdpModel {
+class CustomOnboardTcpUdpModelDetails {
     /**
-     * Constructs a new <code>TcpUdpModel</code>.
-     * @alias module:model/TcpUdpModel
+     * Constructs a new <code>CustomOnboardTcpUdpModelDetails</code>.
+     * @alias module:model/CustomOnboardTcpUdpModelDetails
      * @param image {module:model/TcpUdpImage} 
      * @param tcpDetails {module:model/TcpUdpPortDetail} 
      * @param udpDetails {module:model/TcpUdpPortDetail} 
      */
     constructor(image, tcpDetails, udpDetails) { 
         
-        TcpUdpModel.initialize(this, image, tcpDetails, udpDetails);
+        CustomOnboardTcpUdpModelDetails.initialize(this, image, tcpDetails, udpDetails);
     }
 
     /**
@@ -45,15 +45,15 @@ class TcpUdpModel {
     }
 
     /**
-     * Constructs a <code>TcpUdpModel</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>CustomOnboardTcpUdpModelDetails</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/TcpUdpModel} obj Optional instance to populate.
-     * @return {module:model/TcpUdpModel} The populated <code>TcpUdpModel</code> instance.
+     * @param {module:model/CustomOnboardTcpUdpModelDetails} obj Optional instance to populate.
+     * @return {module:model/CustomOnboardTcpUdpModelDetails} The populated <code>CustomOnboardTcpUdpModelDetails</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new TcpUdpModel();
+            obj = obj || new CustomOnboardTcpUdpModelDetails();
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'Number');
@@ -87,13 +87,13 @@ class TcpUdpModel {
     }
 
     /**
-     * Validates the JSON data with respect to <code>TcpUdpModel</code>.
+     * Validates the JSON data with respect to <code>CustomOnboardTcpUdpModelDetails</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TcpUdpModel</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CustomOnboardTcpUdpModelDetails</code>.
      */
     static validateJSON(data) {
         // check to make sure all required properties are present in the JSON string
-        for (const property of TcpUdpModel.RequiredProperties) {
+        for (const property of CustomOnboardTcpUdpModelDetails.RequiredProperties) {
             if (!data[property]) {
                 throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
             }
@@ -125,63 +125,63 @@ class TcpUdpModel {
 
 }
 
-TcpUdpModel.RequiredProperties = ["image", "tcpDetails", "udpDetails"];
+CustomOnboardTcpUdpModelDetails.RequiredProperties = ["image", "tcpDetails", "udpDetails"];
 
 /**
  * The ID of the TCP/UDP model
  * @member {Number} id
  */
-TcpUdpModel.prototype['id'] = undefined;
+CustomOnboardTcpUdpModelDetails.prototype['id'] = undefined;
 
 /**
  * The name of the model
  * @member {String} modelName
  */
-TcpUdpModel.prototype['modelName'] = undefined;
+CustomOnboardTcpUdpModelDetails.prototype['modelName'] = undefined;
 
 /**
  * The manufacturer of the model
  * @member {String} manufacturer
  */
-TcpUdpModel.prototype['manufacturer'] = undefined;
+CustomOnboardTcpUdpModelDetails.prototype['manufacturer'] = undefined;
 
 /**
  * @member {module:model/TcpUdpImage} image
  */
-TcpUdpModel.prototype['image'] = undefined;
+CustomOnboardTcpUdpModelDetails.prototype['image'] = undefined;
 
 /**
  * @member {module:model/TcpUdpPortDetail} tcpDetails
  */
-TcpUdpModel.prototype['tcpDetails'] = undefined;
+CustomOnboardTcpUdpModelDetails.prototype['tcpDetails'] = undefined;
 
 /**
  * @member {module:model/TcpUdpPortDetail} udpDetails
  */
-TcpUdpModel.prototype['udpDetails'] = undefined;
+CustomOnboardTcpUdpModelDetails.prototype['udpDetails'] = undefined;
 
 /**
  * Additional metadata in raw JSON format
  * @member {Object} metadata
  */
-TcpUdpModel.prototype['metadata'] = undefined;
+CustomOnboardTcpUdpModelDetails.prototype['metadata'] = undefined;
 
 /**
  * The creation timestamp of the model
  * @member {Date} createdAt
  */
-TcpUdpModel.prototype['createdAt'] = undefined;
+CustomOnboardTcpUdpModelDetails.prototype['createdAt'] = undefined;
 
 /**
  * The last update timestamp of the model
  * @member {Date} updatedAt
  */
-TcpUdpModel.prototype['updatedAt'] = undefined;
+CustomOnboardTcpUdpModelDetails.prototype['updatedAt'] = undefined;
 
 
 
 
 
 
-export default TcpUdpModel;
+export default CustomOnboardTcpUdpModelDetails;
 

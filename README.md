@@ -3,8 +3,8 @@
 OmniCoreModelAndStateManagementApi - JavaScript client for omni_core_model_and_state_management_api
 This is an OmniCore Model and State Management server.
 
-- API version: 1.8.14
-- Package version: 1.8.14
+- API version: 1.8.15
+- Package version: 1.8.15
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen
 For more information, please visit [http://www.korewireless.com](http://www.korewireless.com)
 
@@ -189,6 +189,7 @@ Class | Method | HTTP request | Description
  - [OmniCoreModelAndStateManagementApi.CreateConfiguration](docs/CreateConfiguration.md)
  - [OmniCoreModelAndStateManagementApi.CreateVaultKeyBody](docs/CreateVaultKeyBody.md)
  - [OmniCoreModelAndStateManagementApi.CustomOnboard](docs/CustomOnboard.md)
+ - [OmniCoreModelAndStateManagementApi.CustomOnboardTcpUdpModelDetails](docs/CustomOnboardTcpUdpModelDetails.md)
  - [OmniCoreModelAndStateManagementApi.Device](docs/Device.md)
  - [OmniCoreModelAndStateManagementApi.DeviceCommand](docs/DeviceCommand.md)
  - [OmniCoreModelAndStateManagementApi.DeviceConfig](docs/DeviceConfig.md)

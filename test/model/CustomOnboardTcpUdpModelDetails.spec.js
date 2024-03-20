@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new OmniCoreModelAndStateManagementApi.TcpUdpModel();
+    instance = new OmniCoreModelAndStateManagementApi.CustomOnboardTcpUdpModelDetails();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,64 +47,64 @@
       object[property] = value;
   }
 
-  describe('TcpUdpModel', function() {
-    it('should create an instance of TcpUdpModel', function() {
-      // uncomment below and update the code to test TcpUdpModel
-      //var instance = new OmniCoreModelAndStateManagementApi.TcpUdpModel();
-      //expect(instance).to.be.a(OmniCoreModelAndStateManagementApi.TcpUdpModel);
+  describe('CustomOnboardTcpUdpModelDetails', function() {
+    it('should create an instance of CustomOnboardTcpUdpModelDetails', function() {
+      // uncomment below and update the code to test CustomOnboardTcpUdpModelDetails
+      //var instance = new OmniCoreModelAndStateManagementApi.CustomOnboardTcpUdpModelDetails();
+      //expect(instance).to.be.a(OmniCoreModelAndStateManagementApi.CustomOnboardTcpUdpModelDetails);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new OmniCoreModelAndStateManagementApi.TcpUdpModel();
+      //var instance = new OmniCoreModelAndStateManagementApi.CustomOnboardTcpUdpModelDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property modelName (base name: "modelName")', function() {
       // uncomment below and update the code to test the property modelName
-      //var instance = new OmniCoreModelAndStateManagementApi.TcpUdpModel();
+      //var instance = new OmniCoreModelAndStateManagementApi.CustomOnboardTcpUdpModelDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property manufacturer (base name: "manufacturer")', function() {
       // uncomment below and update the code to test the property manufacturer
-      //var instance = new OmniCoreModelAndStateManagementApi.TcpUdpModel();
+      //var instance = new OmniCoreModelAndStateManagementApi.CustomOnboardTcpUdpModelDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property image (base name: "image")', function() {
       // uncomment below and update the code to test the property image
-      //var instance = new OmniCoreModelAndStateManagementApi.TcpUdpModel();
+      //var instance = new OmniCoreModelAndStateManagementApi.CustomOnboardTcpUdpModelDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property tcpDetails (base name: "tcpDetails")', function() {
       // uncomment below and update the code to test the property tcpDetails
-      //var instance = new OmniCoreModelAndStateManagementApi.TcpUdpModel();
+      //var instance = new OmniCoreModelAndStateManagementApi.CustomOnboardTcpUdpModelDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property udpDetails (base name: "udpDetails")', function() {
       // uncomment below and update the code to test the property udpDetails
-      //var instance = new OmniCoreModelAndStateManagementApi.TcpUdpModel();
+      //var instance = new OmniCoreModelAndStateManagementApi.CustomOnboardTcpUdpModelDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property metadata (base name: "metadata")', function() {
       // uncomment below and update the code to test the property metadata
-      //var instance = new OmniCoreModelAndStateManagementApi.TcpUdpModel();
+      //var instance = new OmniCoreModelAndStateManagementApi.CustomOnboardTcpUdpModelDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property createdAt (base name: "createdAt")', function() {
       // uncomment below and update the code to test the property createdAt
-      //var instance = new OmniCoreModelAndStateManagementApi.TcpUdpModel();
+      //var instance = new OmniCoreModelAndStateManagementApi.CustomOnboardTcpUdpModelDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property updatedAt (base name: "updatedAt")', function() {
       // uncomment below and update the code to test the property updatedAt
-      //var instance = new OmniCoreModelAndStateManagementApi.TcpUdpModel();
+      //var instance = new OmniCoreModelAndStateManagementApi.CustomOnboardTcpUdpModelDetails();
       //expect(instance).to.be();
     });
 

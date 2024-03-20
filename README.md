@@ -3,8 +3,8 @@
 OmniCoreModelAndStateManagementApi - JavaScript client for omni_core_model_and_state_management_api
 This is an OmniCore Model and State Management server.
 
-- API version: 1.8.12
-- Package version: 1.8.12
+- API version: 1.8.13
+- Package version: 1.8.13
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen
 For more information, please visit [http://www.korewireless.com](http://www.korewireless.com)
 
@@ -239,6 +239,9 @@ Class | Method | HTTP request | Description
  - [OmniCoreModelAndStateManagementApi.SetRetentionBody](docs/SetRetentionBody.md)
  - [OmniCoreModelAndStateManagementApi.Sink](docs/Sink.md)
  - [OmniCoreModelAndStateManagementApi.StartExportBody](docs/StartExportBody.md)
+ - [OmniCoreModelAndStateManagementApi.TcpUdpImage](docs/TcpUdpImage.md)
+ - [OmniCoreModelAndStateManagementApi.TcpUdpModel](docs/TcpUdpModel.md)
+ - [OmniCoreModelAndStateManagementApi.TcpUdpPortDetail](docs/TcpUdpPortDetail.md)
  - [OmniCoreModelAndStateManagementApi.VaultConfiguration](docs/VaultConfiguration.md)
  - [OmniCoreModelAndStateManagementApi.VaultEncryptionKey](docs/VaultEncryptionKey.md)
  - [OmniCoreModelAndStateManagementApi.VaultStatus](docs/VaultStatus.md)

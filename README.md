@@ -3,8 +3,8 @@
 OmniCoreModelAndStateManagementApi - JavaScript client for omni_core_model_and_state_management_api
 This is an OmniCore Model and State Management server.
 
-- API version: 1.8.18
-- Package version: 1.8.18
+- API version: 1.8.19
+- Package version: 1.8.19
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen
 For more information, please visit [http://www.korewireless.com](http://www.korewireless.com)
 

@@ -9,5 +9,7 @@ Name | Type | Description | Notes
 **roleArn** | **String** |  | [optional] 
 **region** | **String** |  | [optional] 
 **stream** | **String** |  | [optional] 
+**vistaApiKey** | **String** |  | [optional] 
+**isVista** | **Boolean** |  | [optional] 
 
 

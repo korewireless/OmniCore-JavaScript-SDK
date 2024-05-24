@@ -21,6 +21,8 @@ Name | Type | Description | Notes
 
 * `kinesis` (value: `"kinesis"`)
 
+* `vista` (value: `"vista"`)
+
 
 
 

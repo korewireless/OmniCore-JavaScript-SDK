@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **stream** | **String** |  | [optional] 
 **vistaApiKey** | **String** |  | [optional] 
 **isVista** | **Boolean** |  | [optional] 
+**externalId** | **String** |  | [optional] 
 
 

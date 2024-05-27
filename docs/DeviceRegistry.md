@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **numberOfDevices** | **Number** |  | [optional] [readonly] 
 **numberOfGateways** | **Number** |  | [optional] [readonly] 
 **routeTarget** | **String** |  | [optional] 
+**protocol** | **String** |  | [optional] 
 
 
 
